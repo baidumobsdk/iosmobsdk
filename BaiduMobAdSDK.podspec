@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = 'BaiduMobAdSDK'
-  s.version      = '4.5'
+  s.version      = '4.5.001'
   s.summary      = "mobile ad sdk for ios"
 
   # This description is used to generate tags and improve search results.

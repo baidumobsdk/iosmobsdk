@@ -459,7 +459,7 @@
     [self addGestureRecognizer:self.tapGesture];
     
     self.metaLoaded = NO;
-    if (!self.player) {
+    if (!self.player && !self.url) {
         self.player = [AVPlayer playerWithPlayerItem:[AVPlayerItem playerItemWithURL:self.url]];
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
         [self.player addObserver:self forKeyPath:@"rate" options:0 context:nil];

@@ -64,11 +64,15 @@
  */
 @property (nonatomic)   BaiduMobNativeAdActionType actType;
 
-
 /**
  * 是否过期，默认为false，30分钟后过期，需要重新请求广告
  */
 -(BOOL) isExpired;
+
+/**
+ * 可以不传
+ */
+@property (nonatomic, assign)  UIViewController *presentAdViewController;
 
 //#warning 重要，一定要调用这个方法发送视频状态事件和当前视频播放的位置
 /**
@@ -76,4 +80,15 @@
  * @param currentPlaybackTime 播放器当前时间，单位为s
  */
 - (void)trackVideoEvent:(BaiduAdNativeVideoEvent)event withCurrentTime:(NSTimeInterval)currentPlaybackTime;
+
+/**
+ * 发送展现
+ */
+- (void)trackImpression:(UIView *)view;
+
+/**
+ * 发送点击
+ */
+-(void)handleClick:(UIView*)view;
+
 @end

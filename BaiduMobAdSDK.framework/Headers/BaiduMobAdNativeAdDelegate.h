@@ -57,19 +57,14 @@
 - (void)nativeAdsFailLoad:(BaiduMobFailReason) reason;
 
 /**
- * 对于视频广告，展现一张视频预览图，点击可选择开始播放视频
- */
-- (void)nativeAdVideoAreaClick:(BaiduMobAdNativeAdView*)nativeAdView;
-
-/**
  *  广告点击
  */
-- (void)nativeAdClicked:(BaiduMobAdNativeAdView*)nativeAdView;
+- (void)nativeAdClicked:(UIView*)nativeAdView;
 
 /**
  *  广告详情页关闭
  */
--(void)didDismissLandingPage:(BaiduMobAdNativeAdView *)nativeAdView;
+-(void)didDismissLandingPage:(UIView *)nativeAdView;
 
 
 

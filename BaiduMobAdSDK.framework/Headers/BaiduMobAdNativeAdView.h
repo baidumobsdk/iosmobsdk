@@ -93,8 +93,9 @@
  * object 包含文字内容和物料地址
  */
 - (void)loadAndDisplayNativeAdWithObject:(BaiduMobAdNativeAdObject *)object completion:(BaiduMobAdViewCompletionBlock)completionBlock;
-/**
- * 发送展现日志
- */
+
 - (void)trackImpression;
+
++ (void)dealTapGesture:(BOOL) deal;
+
 @end
