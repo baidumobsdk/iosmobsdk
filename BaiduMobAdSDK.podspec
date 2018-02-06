@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "180109" }
+  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "4.5.001" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
