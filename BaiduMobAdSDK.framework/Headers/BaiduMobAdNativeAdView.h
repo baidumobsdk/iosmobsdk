@@ -96,6 +96,8 @@
 
 - (void)trackImpression;
 
+- (BOOL)render;
+
 + (void)dealTapGesture:(BOOL) deal;
 
 @end
