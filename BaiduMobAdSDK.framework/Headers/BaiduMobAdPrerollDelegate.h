@@ -14,44 +14,36 @@
 @protocol BaiduMobAdPrerollDelegate <NSObject>
 
 @optional
-/**
- *  渠道ID
- */
-- (NSString *)channelId;
-/**
- *  启动位置信息
- */
--(BOOL) enableLocation;
 
 /**
- *  广告准备播放
+ *  加载成功
+ *  @param  adMaterialType  BaiduMobMaterialType
  */
-- (void)didAdReady:(BaiduMobAdPreroll *)preroll;
+- (void)prerollAdloadSuccess:(BaiduMobAdPreroll *)preroll withAdMaterialType:(NSString *)adMaterialType;
+
+/**
+ *  加载失败
+ */
+- (void)prerollAdLoadFail:(BaiduMobAdPreroll *)preroll;
+
+/**
+ *  展示成功
+ */
+- (void)prerollAdDidStart:(BaiduMobAdPreroll *)preroll;
 
 /**
  *  广告展示失败
  */
-- (void)didAdFailed:(BaiduMobAdPreroll *)preroll withError:(BaiduMobFailReason) reason;
-
-/**
- *  广告展示成功
- */
-- (void)didAdStart:(BaiduMobAdPreroll *)preroll;
+- (void)prerollAdDidFailed:(BaiduMobAdPreroll *)preroll withError:(BaiduMobFailReason) reason;
 
 /**
  *  广告展示结束
  */
-- (void)didAdFinish:(BaiduMobAdPreroll *)preroll;
+- (void)prerollAdDidFinish:(BaiduMobAdPreroll *)preroll;
 
 /**
  *  广告点击
  */
-- (void)didAdClicked:(BaiduMobAdPreroll *)preroll;
-
-/**
- *  在用户点击完广告条出现全屏广告页面以后，用户关闭广告时的回调
- */
-- (void)didDismissLandingPage;
-
+- (void)prerollAdDidClicked:(BaiduMobAdPreroll *)preroll;
 
 @end

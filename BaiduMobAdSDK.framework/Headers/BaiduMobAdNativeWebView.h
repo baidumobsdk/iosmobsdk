@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class BaiduMobAdNativeAdObject;
-@interface BaiduMobAdNativeWebView : UIWebView
+
+@interface BaiduMobAdNativeWebView : UIView
+
 - (instancetype)initWithFrame:(CGRect)frame andObject:(BaiduMobAdNativeAdObject *)object;
 
 @end

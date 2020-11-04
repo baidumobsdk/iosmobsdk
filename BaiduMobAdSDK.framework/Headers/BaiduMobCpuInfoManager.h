@@ -22,4 +22,15 @@
 - (NSString *)getCpuInfoUrlWithChannelId:(NSString *)channelId
                                    appId:(NSString *)appId;
 
+/**
+ 返回媒体URL
+
+ @param blockId blockID
+ @param appId 应用ID
+ @return url
+ */
+- (NSString *)getCpuInfoUrlWithBlockId:(NSString *)blockId
+                                 appId:(NSString *)appId;
+
+
 @end

@@ -9,16 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "BaiduMobAdCommonConfig.h"
 
-@interface BaiduMobAdNativeAdObject: NSObject
+@interface BaiduMobAdNativeAdObject : NSObject
 
 /**
  * 标题 text
  */
-@property (copy, nonatomic)  NSString *title;
+@property (copy, nonatomic) NSString *title;
 /**
  * 描述 text
  */
-@property (copy, nonatomic)  NSString *text;
+@property (copy, nonatomic) NSString *text;
 /**
  * 小图 url
  */
@@ -45,40 +45,71 @@
 /**
  * 视频url
  */
-@property (copy, nonatomic)  NSString *videoURLString;
+@property (copy, nonatomic) NSString *videoURLString;
 /**
  * 视频时长，单位为s
  */
-@property (copy, nonatomic)  NSNumber *videoDuration;
-/**
- * 品牌名称，若广告返回中无品牌名称则为空
- */
-@property (copy, nonatomic)  NSString *brandName;
+@property (strong, nonatomic) NSNumber *videoDuration;
 /**
  * 自动播放
  */
-@property (copy, nonatomic)  NSNumber *autoPlay;
+@property (strong, nonatomic) NSNumber *autoPlay;
 /**
-* 开发者配置可接受视频后，对返回的广告单元，需先判断MaterialType再决定使用何种渲染组件
+ * 品牌名称，若广告返回中无品牌名称则为空
  */
-@property MaterialType materialType;
+@property (copy, nonatomic) NSString *brandName;
+/**
+* 开发者配置可接受视频后，对返回的广告单元，需先判断BaiduMobMaterialType再决定使用何种渲染组件
+ */
+@property (assign, nonatomic) BaiduMobMaterialType materialType;
 
 /**
  * 返回广告单元的点击类型
  */
-@property (nonatomic)   BaiduMobNativeAdActionType actType;
+@property (assign, nonatomic) BaiduMobNativeAdActionType actType;
+
+/**
+ * 大图图片宽
+ */
+@property (copy, nonatomic) NSString *w;
+/**
+ * 大图图片高
+ */
+@property (copy, nonatomic) NSString *h;
+/**
+ 价格标签
+ */
+@property (copy, nonatomic) NSString *ECPMLevel;
+
+#pragma mark - 智能优选
+/**
+ 信息流广告样式类型
+ */
+@property (nonatomic, assign) BaiduMobAdSmartFeedStyleType style_type;
+/**
+ 标记信息流广告容器宽高是px还是比例 0：无、1：像素、2：比例
+ */
+@property (nonatomic, assign) BaiduMobAdSmartFeedSizeType size_type;
+/**
+ 信息流广告容器宽
+ */
+@property (nonatomic, assign) int container_width;
+/**
+ 信息流广告容器高
+ */
+@property (nonatomic, assign) int container_height;
+
+
+/**
+ *  广告价格标签
+ */
+- (NSString *)getECPMLevel;
 
 /**
  * 是否过期，默认为false，30分钟后过期，需要重新请求广告
  */
--(BOOL) isExpired;
+- (BOOL)isExpired;
 
-/**
- * 可以不传
- */
-@property (nonatomic, assign)  UIViewController *presentAdViewController;
-
-//#warning 重要，一定要调用这个方法发送视频状态事件和当前视频播放的位置
 /**
  * 发送视频广告相关日志
  * @param currentPlaybackTime 播放器当前时间，单位为s
@@ -93,6 +124,11 @@
 /**
  * 发送点击
  */
--(void)handleClick:(UIView*)view;
+- (void)handleClick:(UIView *)view;
+
+/**
+ * 百度联盟官网logo点击
+ */
+- (void)baiduLogoClick:(UIView *)baiduLogoView;
 
 @end

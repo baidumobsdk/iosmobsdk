@@ -1,9 +1,9 @@
 //
-//  BaiduMobAdVideo.h
-//  BaiduMobAdSdk
+//  BaiduMobAdPreroll.h
+//  BaiduMobAdSDK
 //
-//  Created by lishan04 on 15-6-8.
-//
+//  Created by Yang,Dingjia on 2019/3/25.
+//  Copyright © 2019 Baidu Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,7 +14,7 @@
 /**
  *  委托对象
  */
-@property (nonatomic ,assign) id<BaiduMobAdPrerollDelegate> delegate;
+@property (nonatomic ,weak) id<BaiduMobAdPrerollDelegate> delegate;
 /**
  *  应用的APPID
  */
@@ -24,21 +24,69 @@
  */
 @property(nonatomic, copy) NSString *adId;
 /**
- *  设置前贴baseview
+ *  设置贴片baseview
  */
-@property(nonatomic, retain) UIView *renderBaseView;
+@property(nonatomic, strong) UIView *renderBaseView;
+
 /**
- *  是否显示倒计时
+ *  位置信息
  */
-@property BOOL supportTimeLabel;
+@property (nonatomic, assign) BOOL enableLocation;
+
 /**
- *  是否显示详情按钮
+ 设置静音（默认非静音）
+ 
+ @param mute YES静音 NO非静音
  */
-@property BOOL supportActImage;
+@property (nonatomic, assign) BOOL mute;
+
+/**
+ *  使用controller present 落地页
+ */
+@property (nonatomic, weak) UIViewController *presentAdViewController;
 
 /**
  *  请求广告
  */
-- (void)request;
+- (void)load;
 
+/**
+ *  关闭广告（stop视频，普通广告请remove）
+ */
+- (void)close;
+
+/**
+ 当前播放时长
+
+ @return 视频播放时长
+ */
+- (NSTimeInterval)currentTime;
+
+/**
+ 视频总时长
+
+ @return 视频总时长
+ */
+- (NSTimeInterval)duration;
+
+/**
+ * 对返回的广告单元，需先判断BaiduMobMaterialType再决定使用何种渲染组件
+ */
+- (NSString *)adMaterialType;
+
+
+/**
+ * @brief 重新布局，根据触发时目前新尺寸，用于横竖屏切换
+ *
+ */
+- (void)reSize;
+
+
+/**
+ * @brief 重新布局.动画式变化
+ *
+ * @param duration 动画时长
+ * @param frame 目标的尺寸
+ */
+- (void)reSizeInAnimateDuration:(double)duration targetFrame:(CGRect)frame;
 @end

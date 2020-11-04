@@ -24,7 +24,7 @@ typedef enum _BaiduMobAdInterstitialType {
 /**
  *  委托对象
  */
-@property (nonatomic ,assign) id<BaiduMobAdInterstitialDelegate> delegate;
+@property (nonatomic ,weak) id<BaiduMobAdInterstitialDelegate> delegate;
 
 
 /**
@@ -46,6 +46,11 @@ typedef enum _BaiduMobAdInterstitialType {
  *  SDK版本
  */
 @property (nonatomic, readonly) NSString* Version;
+
+/**
+ *  使用controller present 落地页
+ */
+@property (nonatomic, weak) UIViewController *presentAdViewController;
 
 /**
  *  实时加载并显示插屏广告.会卡住约两秒钟,影响用户体验,不建议使用.

@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.5"
+#define SDK_VERSION_IN_MSSP @"4.72"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -18,7 +18,7 @@ typedef enum {
     VIDEO, // 视频广告，需开发者增加播放器支持
     HTML, // html模版广告
     GIF //GIF广告
-} MaterialType;
+} BaiduMobMaterialType;
 
 typedef enum {
     BaiduMobNativeAdActionTypeLP = 1,
@@ -37,7 +37,10 @@ typedef enum {
     onSkip, //跳过视频
     onShowEndCard,// 展现endcard
     onClickEndCard,// 点击endcard
-    onClickDownloadDirect // 视频下载广告点击直接下载
+    onClickDownloadDirect, // 视频下载广告点击直接下载
+    onCacheSuccess,//视频缓存成功
+    onCacheFail,//视频缓存失败
+    onCacheExpire//广告过期
 } BaiduAdNativeVideoEvent;
 
 /**
@@ -53,12 +56,9 @@ typedef enum {
  *  广告展示失败类型枚举
  */
 typedef enum _BaiduMobFailReason {
-    BaiduMobFailReason_NOAD = 0,
-    // 没有推广返回
-    BaiduMobFailReason_EXCEPTION,
-    //网络或其它异常
-    BaiduMobFailReason_FRAME
-    //广告尺寸异常，不显示广告
+    BaiduMobFailReason_NOAD = 0,// 没有推广返回
+    BaiduMobFailReason_EXCEPTION,//网络或其它异常
+    BaiduMobFailReason_FRAME//广告尺寸或元素异常，不显示广告
 } BaiduMobFailReason;
 
 
@@ -74,6 +74,30 @@ typedef enum {
     BaiduMobAdLpStyleLightBlue,
     BaiduMobAdLpStyleBlack
 } BaiduMobAdLpStyle;
+
+
+/**
+ * 智能优选feed类型
+ */
+typedef NS_ENUM(NSInteger, BaiduMobAdSmartFeedStyleType) {
+    FeedType_PIC_BOTTOM_TITLE = 28,//大图底部文字
+    FeedType_PIC_TOP_TITLE = 29,//大图上部文字
+    FeedType_PIC_LOGO = 30,//大图上部文字+logo
+    FeedType_LEFT_PIC = 33,//左图右文
+    FeedType_RIGHT_PIC = 34,//右图左文
+    FeedType_GROUP_PIC = 35,//三图图文
+    FeedType_GROUP_PIC_LOGO = 36,//三图图文+logo
+    FeedType_VIDEO_TOP_TITLE = 37//视频+文字
+};
+
+/**
+ * 智能优选尺寸类型
+ */
+typedef NS_ENUM(NSInteger, BaiduMobAdSmartFeedSizeType) {
+    SizeType_NONE = 0,//不使用
+    SizeType_PIXEL = 1,//像素
+    SizeType_SCALE = 2,//比例
+};
 
 /**
  *  内容联盟频道id列表
@@ -103,3 +127,6 @@ typedef enum {
 #define CPU_CHANNEL_CULTURE         @"1036" //文化
 
 #endif
+
+#define BaiduMobAdDEPRECATED_MSG(instead) DEPRECATED_MSG_ATTRIBUTE(instead)
+#define BaiduMobAdDEPRECATED DEPRECATED_ATTRIBUTE
