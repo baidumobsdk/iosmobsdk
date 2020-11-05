@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = 'BaiduMobAdSDK'
-  s.version      = '4.5.002'
+  s.version      = '4.72'
   s.summary      = "mobile ad sdk for ios"
 
   # This description is used to generate tags and improve search results.
@@ -54,9 +54,6 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "baidumobsdk" => "baidumobsdk@163.com" }
-  # Or just: s.author    = "lotty_wh"
-  # s.authors            = { "lotty_wh" => "wuh24_tj@163.com" }
-  # s.social_media_url   = "http://twitter.com/lotty_wh"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -80,7 +77,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "4.5.002" }
+  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "4.72" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
