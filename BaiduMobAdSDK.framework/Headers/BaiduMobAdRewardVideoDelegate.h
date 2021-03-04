@@ -55,7 +55,13 @@
 - (void)rewardedVideoAdDidPlayFinish:(BaiduMobAdRewardVideo *)video;
 
 /**
- *  用户点击关闭
+ *  用户点击视频跳过按钮，进入尾帧
+ @param progress 当前播放进度 单位百分比 （注意浮点数）
+ */
+- (void)rewardedVideoAdDidSkip:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
+
+/**
+ *  视频正常播放完毕，或者视频跳过后，尾帧关闭
  @param progress 当前播放进度 单位百分比 （注意浮点数）
  */
 - (void)rewardedVideoAdDidClose:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;

@@ -102,6 +102,18 @@
 - (void)stop;
 
 /**
+ 设置默认封面图背景样式，默认显示浅色，请在play前调用
+ */
+- (void)setFrontPostViewWithPic:(BaiduMobAdVideoFrontPictureType)type;
+
+/**
+ 设置隐藏暂停按钮，默认显示，请在play前调用
+ 
+ @param hidden YES隐藏  NO显示
+ */
+- (void)hidePauseButton:(BOOL)hidden;
+
+/**
  设置静音
 
  @param mute YES静音   NO非静音

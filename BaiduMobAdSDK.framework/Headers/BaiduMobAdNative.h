@@ -12,11 +12,6 @@
 
 @class BaiduMobAdNativeAdView;
 
-typedef NS_ENUM(NSInteger, BaiduMobAdType) {
-    BaiduMobAdTypeFeed = 0, // 默认 请求普通信息流广告
-    BaiduMobAdTypePortrait = 1  // 竖版小视频广告
-};
-
 @interface BaiduMobAdNative : NSObject
 
 /**

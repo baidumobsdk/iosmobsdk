@@ -43,7 +43,7 @@
 /**
  *  启动位置信息
  */
-- (BOOL) enableLocation;//如果enable，plist 需要增加NSLocationWhenInUseUsageDescription
+- (BOOL)enableLocation;//如果enable，plist 需要增加NSLocationWhenInUseUsageDescription
 
 /**
  * 广告请求成功
@@ -58,9 +58,16 @@
 - (void)nativeAdsFailLoad:(BaiduMobFailReason)reason nativeAd:(BaiduMobAdNative *)nativeAd;
 
 /**
- *  广告曝光回调
+ *  广告曝光成功
  */
 - (void)nativeAdExposure:(UIView *)nativeAdView nativeAdDataObject:(BaiduMobAdNativeAdObject *)object;
+
+/**
+ *  广告曝光失败
+ */
+- (void)nativeAdExposureFail:(UIView *)nativeAdView
+          nativeAdDataObject:(BaiduMobAdNativeAdObject *)object
+                  failReason:(int)reason;
 
 /**
  *  广告点击

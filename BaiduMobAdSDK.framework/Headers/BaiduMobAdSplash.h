@@ -69,5 +69,10 @@
 */
 - (void)showInContainerView:(UIView *)view;
 
+/**
+ * 开屏广告自定义相关配置字段
+ */
+- (NSString *)getExtData;
+
 
 @end

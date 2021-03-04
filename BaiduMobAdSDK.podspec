@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   #
 
   s.name         = 'BaiduMobAdSDK'
-  s.version      = '4.7200'
+  s.version      = '4.75'
   s.summary      = "mobile ad sdk for ios"
-  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "4.7200" }
+  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "4.75" }
 
 
   # This description is used to generate tags and improve search results.
@@ -31,6 +31,10 @@ Pod::Spec.new do |s|
 
 
   s.homepage     = "https://github.com/baidumobsdk/iosmobsdk"
+  s.frameworks   = 'CoreLocation', 'SystemConfiguration', 'CoreGraphics', 'CoreMotion', 'CoreTelephony', 'AdSupport', 'SystemConfiguration', 'QuartzCore', 'WebKit', 'MessageUI','SafariServices','AVFoundation','EventKit','QuartzCore','CoreMedia','StoreKit'
+  s.libraries    = 'c++'
+  s.resource     = 'baidumobadsdk.bundle'
+  s.vendored_frameworks = 'BaiduMobAdSDK.framework'
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -64,7 +68,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios,'7.0'
+  s.platform     = :ios,'8.0'
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -117,9 +121,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks = 'CoreLocation', 'SystemConfiguration', 'CoreGraphics', 'CoreMotion', 'CoreTelephony', 'AdSupport', 'SystemConfiguration', 'QuartzCore', 'WebKit', 'MessageUI','SafariServices','AVFoundation','EventKit','QuartzCore','CoreMedia','StoreKit'
-# 
-  s.libraries = 'c++'
+
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -133,7 +135,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-   s.vendored_frameworks = 'BaiduMobAdSDK.framework'
+
 
  
 

@@ -31,6 +31,10 @@
  */
 - (BOOL)enableLocation;
 
+/**
+ *  广告曝光成功
+ */
+- (void)splashDidExposure:(BaiduMobAdSplash *)splash;
 
 /**
  *  广告展示成功
