@@ -25,12 +25,12 @@
 /**
  *  设置开屏广告是否可以点击的属性,开屏默认可以点击。
  */
-@property (nonatomic) BOOL canSplashClick;
+@property (nonatomic, assign) BOOL canSplashClick;
 
 /**
  *  SDK版本
  */
-@property (nonatomic, readonly) NSString *Version;
+@property (nonatomic, readonly) NSString *version;
 
 /**
  * 广告请求超时时间，默认3s，单位s
@@ -46,6 +46,11 @@
  *  使用controller present 落地页
  */
 @property (nonatomic, weak) UIViewController *presentAdViewController;
+
+/**
+ * 是否开启部分区域可点击
+ */
+@property (nonatomic, assign) BOOL enableAreaClick;
 
 /**
  *  请求并展示开屏广告，广告尺寸以传入window大小为准
@@ -70,9 +75,18 @@
 - (void)showInContainerView:(UIView *)view;
 
 /**
+ * 重置广告容器大小
+*/
+- (void)resizeLayout;
+
+/**
  * 开屏广告自定义相关配置字段
  */
 - (NSString *)getExtData;
 
+/**
+ * 销毁开屏视频播放器
+ */
+- (void)stop;
 
 @end
