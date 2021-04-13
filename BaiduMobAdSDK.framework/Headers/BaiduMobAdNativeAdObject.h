@@ -80,6 +80,10 @@
  价格标签
  */
 @property (copy, nonatomic) NSString *ECPMLevel;
+/**
+ 用户点击行为
+ */
+@property (copy, nonatomic) NSString *actButtonString;
 
 #pragma mark - 智能优选
 /**

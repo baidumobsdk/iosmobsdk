@@ -11,6 +11,7 @@
 @class BaiduMobAdNativeVideoBaseView;
 @class BaiduMobAdNativeAdObject;
 @class BaiduMobAdNativeWebView;
+@class BaiduMobAdActButton;
 @interface BaiduMobAdNativeAdView : UIView
 
 /**
@@ -52,6 +53,11 @@
  * 品牌名称 view
  */
 @property (strong, nonatomic) UILabel *brandLabel;
+
+/**
+ * 用户点击行为按钮
+ */
+@property (strong, nonatomic) BaiduMobAdActButton *actButton;
 
 /**
  * 视频 view
