@@ -48,9 +48,15 @@
 @property (nonatomic, weak) UIViewController *presentAdViewController;
 
 /**
- * 是否开启部分区域可点击
+ * 是否开启部分区域可点击，默认不限制
  */
 @property (nonatomic, assign) BOOL enableAreaClick;
+
+/**
+ * 是否显示点击区域 ，默认不显示，
+ * 限制点击区域后默认开启，不可隐藏
+ */
+@property (nonatomic, assign) BOOL displayAreaClick;
 
 /**
  *  请求并展示开屏广告，广告尺寸以传入window大小为准

@@ -85,6 +85,11 @@
 */
 - (BOOL)render;
 
+/**
+ * 是否限制点击区域，YES限制，NO不限制
+ */
+@property (nonatomic, assign) BOOL enableAreaClick;
+
 //TODO:修改如下字段后，必须调用一次reSize方法，部分属性会影响高度，注意修改后viewHeight会改变
 //logo配置
 @property (nonatomic, assign) CGFloat iconWidth;
@@ -128,6 +133,30 @@
 @property (nonatomic, assign) CGFloat lastPicHeight;
 @property (nonatomic, assign) CGFloat lastPicRight;
 @property (nonatomic, assign) CGFloat lastPicBottom;
+
+//底部行为按钮
+@property (nonatomic, assign) CGFloat buttonLeft;
+@property (nonatomic, assign) CGFloat buttonRight;
+@property (nonatomic, assign) CGFloat buttonTop;
+@property (nonatomic, assign) CGFloat buttonBottom;
+@property (nonatomic, assign) CGFloat buttonWidth;
+@property (nonatomic, assign) CGFloat buttonHeight;
+@property (nonatomic, assign) UIFont *buttonFont;
+@property (nonatomic, assign) CGFloat buttonCornerRadius;
+@property (nonatomic, strong) UIColor *buttonTitleColor;
+@property (nonatomic, strong) UIColor *buttonBackgroundColor;
+
+//底部负反馈按钮
+@property (nonatomic, assign) CGFloat dislikeBtnLeft;
+@property (nonatomic, assign) CGFloat dislikeBtnRight;
+@property (nonatomic, assign) CGFloat dislikeBtnTop;
+@property (nonatomic, assign) CGFloat dislikeBtnBottom;
+@property (nonatomic, assign) CGFloat dislikeBtnHeigth;
+@property (nonatomic, assign) CGFloat dislikeBtnWidth;
+@property (nonatomic, strong) UIImage *dislikeBtnImage;
+@property (nonatomic, assign) CGFloat animationDuration;
+@property (nonatomic, assign) BaiduMobAdFeedbackAnimation *animationType;
+@property (nonatomic, assign) BOOL enableAnimation;
 
 //底部品牌字样,建议不更改
 @property (nonatomic, assign) CGFloat brandLeft;

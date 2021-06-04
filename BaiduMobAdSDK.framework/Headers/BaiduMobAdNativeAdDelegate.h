@@ -84,6 +84,11 @@
  */
 - (void)unionAdClicked:(UIView *)nativeAdView nativeAdDataObject:(BaiduMobAdNativeAdObject *)object;
 
+/**
+ * 智能优选负反馈的选择
+ */
+- (void)smartFeedbackSelectedWithObject:(BaiduMobAdNativeAdObject *)object;
+
 #pragma mark - Deprecated
 
 - (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdObjectsSuccessLoad:nativeAd:");

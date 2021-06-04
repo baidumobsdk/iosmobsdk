@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.77"
+#define SDK_VERSION_IN_MSSP @"4.78"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -117,6 +117,24 @@ typedef enum {
     lightColor_pic = 0, // 浅色图片
     deepColor_pic = 1 // 深色图片
 } BaiduMobAdVideoFrontPictureType;
+
+/**
+ * 负反馈弹窗动画
+ */
+typedef NS_ENUM(NSInteger, BaiduMobAdFeedbackAnimation) {
+    BaiduFadeAnimation, // 淡入淡出
+    BaiduLargenAnimation // 变大效果
+};
+
+/**
+ * 用户选择的反馈原因
+ */
+typedef NS_ENUM(NSInteger, BaiduMobAdChoosedReason) {
+    content_dislike = 1, // 不感兴趣
+    content_vulgar, // 内容低俗
+    content_spam, // 垃圾内容
+    content_recommendation // 重复推荐
+};
 
 /**
  *  内容联盟频道id列表
