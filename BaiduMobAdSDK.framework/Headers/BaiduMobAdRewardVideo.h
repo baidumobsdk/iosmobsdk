@@ -32,6 +32,10 @@
  */
 @property (nonatomic, assign) BOOL enableLocation;
 
+/**
+ *  是否使用激励倒计时
+ */
+@property (nonatomic, assign) BOOL useRewardCountdown;
 
 /**
  *  预加载视频广告，并缓存物料信息到本地。

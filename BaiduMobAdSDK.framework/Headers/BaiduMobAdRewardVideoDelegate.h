@@ -55,6 +55,14 @@
 - (void)rewardedVideoAdDidPlayFinish:(BaiduMobAdRewardVideo *)video;
 
 /**
+ * 成功激励回调
+ * 低于30s的视频播放达到90%即会回调
+ * 高于30s的视频播放达到27s即会回调
+ * @param verify 激励验证，YES为成功
+ */
+- (void)rewardedVideoAdRewardDidSuccess:(BaiduMobAdRewardVideo *)video verify:(BOOL)verify;
+
+/**
  *  用户点击视频跳过按钮，进入尾帧
  @param progress 当前播放进度 单位百分比 （注意浮点数）
  */

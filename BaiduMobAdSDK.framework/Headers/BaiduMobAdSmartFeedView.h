@@ -154,9 +154,6 @@
 @property (nonatomic, assign) CGFloat dislikeBtnHeigth;
 @property (nonatomic, assign) CGFloat dislikeBtnWidth;
 @property (nonatomic, strong) UIImage *dislikeBtnImage;
-@property (nonatomic, assign) CGFloat animationDuration;
-@property (nonatomic, assign) BaiduMobAdFeedbackAnimation *animationType;
-@property (nonatomic, assign) BOOL enableAnimation;
 
 //底部品牌字样,建议不更改
 @property (nonatomic, assign) CGFloat brandLeft;
@@ -169,12 +166,8 @@
 
 #pragma mark - Deprecated
 
-///已废弃，请及时替换mainMaterial*
-@property (nonatomic, assign) CGFloat mainPicLeft BaiduMobAdDEPRECATED_MSG("已废弃，请及时更换mainMaterial");
-@property (nonatomic, assign) CGFloat mainPicTop BaiduMobAdDEPRECATED_MSG("已废弃，请及时更换mainMaterial");
-@property (nonatomic, assign) CGFloat mainPicWidth BaiduMobAdDEPRECATED_MSG("已废弃，请及时更换mainMaterial");
-@property (nonatomic, assign) CGFloat mainPicHeight BaiduMobAdDEPRECATED_MSG("已废弃，请及时更换mainMaterial");
-@property (nonatomic, assign) CGFloat mainPicRight BaiduMobAdDEPRECATED_MSG("已废弃，请及时更换mainMaterial");
-@property (nonatomic, assign) CGFloat mainPicBottom BaiduMobAdDEPRECATED_MSG("已废弃，请及时更换mainMaterial");
+@property (nonatomic, assign) int animationType BaiduMobAdDEPRECATED_MSG("已废弃");
+@property (nonatomic, assign) BOOL enableAnimation BaiduMobAdDEPRECATED_MSG("已废弃");
+@property (nonatomic, assign) CGFloat animationDuration BaiduMobAdDEPRECATED_MSG("已废弃");
 
 @end
