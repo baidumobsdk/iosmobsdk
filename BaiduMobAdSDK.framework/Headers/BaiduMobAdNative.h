@@ -31,7 +31,7 @@
 
 /**
  * 针对视频缓存delegate
- * 适用于小视频，信息流视频不建议使用
+ * 适用于竖版视频，信息流视频不建议使用
  */
 @property (nonatomic, weak) id<BaiduMobAdNativeCacheDelegate> cacheDelegate;
 

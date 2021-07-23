@@ -38,6 +38,16 @@
 @property (nonatomic, assign) BOOL useRewardCountdown;
 
 /**
+ * 设置用户id
+ */
+@property (nonatomic, strong) NSString *userID;
+
+/**
+ * 设置自定义参数
+ */
+@property (nonatomic, strong) NSString *extraInfo;
+
+/**
  *  预加载视频广告，并缓存物料信息到本地。
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */

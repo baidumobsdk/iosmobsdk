@@ -9,13 +9,13 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.79"
+#define SDK_VERSION_IN_MSSP @"4.8"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
 typedef enum {
     BaiduMobAdTypeFeed = 0, // 默认 请求普通信息流广告
-    BaiduMobAdTypePortrait = 1,  // 竖版小视频广告
+    BaiduMobAdTypePortrait = 1,  // 竖版视频广告
     BaiduMobAdTypeRewardVideo = 2,  // 激励视频
     BaiduMobAdTypeFullScreenVideo = 3   // 全屏视频
 } BaiduMobAdType;

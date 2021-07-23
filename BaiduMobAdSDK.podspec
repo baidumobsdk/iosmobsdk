@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = 'BaiduMobAdSDK'
-  s.version      = '4.79'
+  s.version      = '4.80'
   s.summary      = "mobile ad sdk for ios"
   s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "4.79" }
 
