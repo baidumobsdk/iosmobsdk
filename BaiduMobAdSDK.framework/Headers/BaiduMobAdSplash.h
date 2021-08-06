@@ -59,6 +59,11 @@
 @property (nonatomic, assign) BOOL displayAreaClick;
 
 /**
+ * 设置摇一摇图片的尺寸高或宽，默认69pt
+ */
+@property (nonatomic, assign) CGFloat shakeImageViewSize;
+
+/**
  *  请求并展示开屏广告，广告尺寸以传入window大小为准
  */
 - (void)loadAndDisplayUsingKeyWindow:(UIWindow *)keyWindow;
