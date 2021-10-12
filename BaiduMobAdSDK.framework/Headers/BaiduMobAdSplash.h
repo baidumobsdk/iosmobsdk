@@ -96,6 +96,11 @@
 - (NSString *)getExtData;
 
 /**
+ *  广告价格标签
+ */
+- (NSString *)getECPMLevel;
+
+/**
  * 销毁开屏视频播放器
  */
 - (void)stop;

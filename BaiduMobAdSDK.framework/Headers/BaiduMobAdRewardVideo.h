@@ -48,6 +48,11 @@
 @property (nonatomic, strong) NSString *extraInfo;
 
 /**
+ * 是否使用跳过弹窗
+ */
+@property (nonatomic, assign) BOOL useSkipAlertView;
+
+/**
  *  预加载视频广告，并缓存物料信息到本地。
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */
@@ -70,5 +75,10 @@
  *  默认使用本地缓存，本地缓存失效则在线请求
  */
 - (void)showFromViewController:(UIViewController *)controller;
+
+/**
+ *  广告价格标签
+ */
+- (NSString *)getECPMLevel;
 
 @end

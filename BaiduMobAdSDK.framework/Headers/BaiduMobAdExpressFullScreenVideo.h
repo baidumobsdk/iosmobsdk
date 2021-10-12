@@ -63,4 +63,9 @@
  */
 - (void)showFromViewController:(UIViewController *)controller;
 
+/**
+ *  广告价格标签
+ */
+- (NSString *)getECPMLevel;
+
 @end
