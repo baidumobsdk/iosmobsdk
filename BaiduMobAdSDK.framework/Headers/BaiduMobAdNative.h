@@ -20,9 +20,9 @@
 @property(nonatomic, copy) NSString *publisherId;
 
 /**
- *  设置/获取代码位id
+ *  设置/获取代码位(广告位)id
  */
-@property(nonatomic, copy) NSString *adId;
+@property (nonatomic, copy) NSString *adUnitTag;
 
 /**
  * 原生广告delegate
@@ -66,20 +66,36 @@
 @property (nonatomic, assign) BaiduMobAdType adType;
 
 /**
+ * 信息流传参
+ */
+@property (nonatomic, strong) BaiduMobAdFeedRequestParameters *requestParameters;
+
+/**
  *  请求原生广告
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */
 - (void)requestNativeAds;
 
 /**
- *带参数请求原生广告
- *注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
-*/
-- (void)requestNativeAdsWithParameters:(BaiduMobAdFeedRequestParameters *)requestParameters;
-
-/**
  *  预加载视频素材  如果有多条素材会在所以素材均缓存完毕后回调nativeVideoAdCacheSuccess
  */
 - (void)preloadVideoMaterial;
+
+/**
+ * 获取Bidding token
+ * @return 媒体ADX请求广告所需的token
+ */
+- (NSString *)getBiddingToken;
+
+/**
+ * 加载bidding广告数据
+ */
+- (void)setBiddingData:(NSString *)data;
+
+#pragma mark - DEPRECATED_ATTRIBUTE
+
+@property (nonatomic, copy) NSString *adId BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换AdUnitTag使用方式");
+
+- (void)requestNativeAdsWithParameters:(BaiduMobAdFeedRequestParameters *)requestParameters BaiduMobAdDEPRECATED_MSG("已废弃，请及时参考Demo修改使用方式");
 
 @end

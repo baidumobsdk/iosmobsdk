@@ -101,6 +101,18 @@
 - (NSString *)getECPMLevel;
 
 /**
+ * 反馈竞价成功及二价
+ * @param secondPrice 第二价格
+ */
+- (void)biddingSuccess:(NSString *)secondPrice;
+
+/**
+ * 反馈竞价失败及原因
+ * @param reason 失败原因
+ */
+- (void)biddingFail:(NSString *)reason;
+
+/**
  * 销毁开屏视频播放器
  */
 - (void)stop;
