@@ -93,5 +93,15 @@
  */
 - (void)biddingFail:(NSString *)reason;
 
+/**
+ * 获取Bidding token
+ * @return 媒体ADX请求广告所需的token
+ */
+- (NSString *)getBiddingToken;
+
+/**
+ * 加载bidding广告数据
+ */
+- (void)setBiddingData:(NSString *)data;
 
 @end

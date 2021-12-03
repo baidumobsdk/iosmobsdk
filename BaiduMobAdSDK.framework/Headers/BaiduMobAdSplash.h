@@ -113,7 +113,18 @@
 - (void)biddingFail:(NSString *)reason;
 
 /**
- * 销毁开屏视频播放器
+ * 获取Bidding token
+ * @return 媒体ADX请求广告所需的token
+ */
+- (NSString *)getBiddingToken;
+
+/**
+ * 加载bidding广告数据
+ */
+- (void)setBiddingData:(NSString *)data;
+
+/**
+ * 销毁开屏，释放资源
  */
 - (void)stop;
 
