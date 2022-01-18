@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.843"
+#define SDK_VERSION_IN_MSSP @"4.85"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -51,7 +51,9 @@ typedef enum {
     onCacheFail,//视频缓存失败
     onCacheExpire, //广告过期
     onReplay, //重播
-    onPlayEnd // 播放终止，横、竖版视频
+    onPlayEnd, // 播放终止，横、竖版视频
+    onMute, // 静音按钮点击
+    onReady // 准备播放
     
 } BaiduAdNativeVideoEvent;
 
@@ -122,11 +124,15 @@ typedef enum {
 /**
  * 用户选择的反馈原因
  */
-typedef NS_ENUM(NSInteger, BaiduMobAdChoosedReason) {
-    content_dislike = 1, // 不感兴趣
-    content_vulgar, // 内容低俗
-    content_spam, // 垃圾内容
-    content_recommendation // 重复推荐
+typedef NS_ENUM(NSInteger, BaiduMobAdDislikeReasonType) {
+    BaiduMobAdUnlike = 0, // 不感兴趣
+    BaiduMobAdLowQuality, // 内容质量差
+    BaiduMobAdRepeatRecommend, // 推荐重复
+    BaiduMobAdVulgarPornography, // 低俗色情
+    BaiduMobAdViolatingLaws, // 违法违规
+    BaiduMobAdFake, // 虚假欺诈
+    BaiduMobAdInducedClick, // 诱导点击
+    BaiduMobAdSuspectedPlagiarism // 疑似抄袭
 };
 
 /**

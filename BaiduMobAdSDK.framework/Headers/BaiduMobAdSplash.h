@@ -119,13 +119,19 @@
 - (NSString *)getBiddingToken;
 
 /**
- * 加载bidding广告数据
+ * 请求bidding广告
+ * @param bidId 媒体传入，竞价成功的广告id
  */
-- (void)setBiddingData:(NSString *)data;
+- (void)loadBiddingAd:(NSString *)bidId;
 
 /**
  * 销毁开屏，释放资源
  */
 - (void)stop;
+
+#pragma mark - DEPRECATED_ATTRIBUTE
+
+- (void)setBiddingData:(NSString *)data BaiduMobAdDEPRECATED_MSG("已废弃，请接入最新的服务端bidding渲染方式");
+
 
 @end
