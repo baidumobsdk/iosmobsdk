@@ -51,6 +51,11 @@
  */
 - (void)interstitialAdDidLPClose:(BaiduMobAdExpressInterstitial *)interstitial;
 
+/**
+ * 广告反馈点击
+ */
+- (void)interstitialAdDislikeClick:(BaiduMobAdExpressInterstitial *)interstitial;
+
 #pragma mark - 视频缓存delegate
 
 /**

@@ -77,6 +77,12 @@
 - (void)requestNativeAds;
 
 /**
+ *  请求原生广告(组件)
+ *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
+ */
+- (void)requestExpressNativeAds;
+
+/**
  *  预加载视频素材  如果有多条素材会在所以素材均缓存完毕后回调nativeVideoAdCacheSuccess
  */
 - (void)preloadVideoMaterial;

@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.85"
+#define SDK_VERSION_IN_MSSP @"4.86"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -125,6 +125,7 @@ typedef enum {
  * 用户选择的反馈原因
  */
 typedef NS_ENUM(NSInteger, BaiduMobAdDislikeReasonType) {
+    BaiduMobAdDislikeCancel = -1, // 取消点击
     BaiduMobAdUnlike = 0, // 不感兴趣
     BaiduMobAdLowQuality, // 内容质量差
     BaiduMobAdRepeatRecommend, // 推荐重复

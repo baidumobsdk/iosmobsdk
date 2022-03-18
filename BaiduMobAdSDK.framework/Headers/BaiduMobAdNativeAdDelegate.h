@@ -11,6 +11,7 @@
 @class BaiduMobAdNative;
 @class BaiduMobAdNativeAdView;
 @class BaiduMobAdNativeAdObject;
+@class BaiduMobAdExpressNativeView;
 
 @protocol BaiduMobAdNativeAdDelegate <NSObject>
 
@@ -50,6 +51,19 @@
  * 请求成功的BaiduMobAdNativeAdObject数组，如果只成功返回一条原生广告，数组大小为1
  */
 - (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds nativeAd:(BaiduMobAdNative *)nativeAd;
+
+/**
+ * 广告请求成功
+ * 请求成功的BaiduMobAdNativeAdObject数组，如果只成功返回一条原生广告，数组大小为1
+ */
+- (void)nativeAdExpressSuccessLoad:(NSArray *)expressAds nativeAd:(BaiduMobAdNative *)nativeAd;
+
+/**
+ * 组件渲染成功
+ *
+ */
+- (void)nativeAdExpressSuccessRender:(BaiduMobAdExpressNativeView *)express
+                            nativeAd:(BaiduMobAdNative *)nativeAd;
 
 /**
  *  广告请求失败
