@@ -37,6 +37,11 @@
 - (void)play;
 
 /**
+ 继续播放
+ */
+- (void)resume;
+
+/**
  暂停播放
  */
 - (void)pause;

@@ -53,6 +53,12 @@
 @property (nonatomic, assign) CGFloat shakeImageViewSize;
 
 /**
+ * 设置底价过滤，支持客户端与服务端bidding配置
+ * 仅支持整数值，单位：分
+ */
+@property (nonatomic, assign) int bidFloor;
+
+/**
  *  请求并展示开屏广告，广告尺寸以传入window大小为准
  */
 - (void)loadAndDisplayUsingKeyWindow:(UIWindow *)keyWindow;

@@ -71,6 +71,12 @@
 @property (nonatomic, strong) BaiduMobAdFeedRequestParameters *requestParameters;
 
 /**
+ * 设置底价过滤，支持客户端与服务端bidding配置
+ * 仅支持整数值，单位：分
+ */
+@property (nonatomic, assign) int bidFloor;
+
+/**
  *  请求原生广告
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */

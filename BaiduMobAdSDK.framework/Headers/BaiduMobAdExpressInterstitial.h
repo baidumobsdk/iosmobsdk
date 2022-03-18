@@ -35,6 +35,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL enableLocation;
 
 /**
+ * 设置底价过滤，支持客户端与服务端bidding配置
+ * 仅支持整数值，单位：分
+ */
+@property (nonatomic, assign) int bidFloor;
+
+/**
  *  预加载插屏广告，并缓存物料信息到本地。
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */

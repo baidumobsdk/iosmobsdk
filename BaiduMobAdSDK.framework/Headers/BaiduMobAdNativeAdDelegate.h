@@ -48,28 +48,23 @@
 
 /**
  * 广告请求成功
- * 请求成功的BaiduMobAdNativeAdObject数组，如果只成功返回一条原生广告，数组大小为1
+ * 请求成功的数组，如果只成功返回一条原生广告，数组大小为1
+ * 注意：如果是返回元素，nativeAds为BaiduMobAdNativeAdObject数组。如果是模板智选，nativeAds为BaiduMobAdExpressNativeView数组
  */
 - (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds nativeAd:(BaiduMobAdNative *)nativeAd;
 
 /**
- * 广告请求成功
- * 请求成功的BaiduMobAdNativeAdObject数组，如果只成功返回一条原生广告，数组大小为1
- */
-- (void)nativeAdExpressSuccessLoad:(NSArray *)expressAds nativeAd:(BaiduMobAdNative *)nativeAd;
-
-/**
- * 组件渲染成功
- *
+ * BaiduMobAdExpressNativeView组件渲染成功
  */
 - (void)nativeAdExpressSuccessRender:(BaiduMobAdExpressNativeView *)express
                             nativeAd:(BaiduMobAdNative *)nativeAd;
 
 /**
  *  广告请求失败
- *  失败的类型 BaiduMobFailReason
  */
-- (void)nativeAdsFailLoad:(BaiduMobFailReason)reason nativeAd:(BaiduMobAdNative *)nativeAd;
+- (void)nativeAdsFailLoadCode:(NSString *)errCode
+                      message:(NSString *)message
+                     nativeAd:(BaiduMobAdNative *)nativeAd;
 
 /**
  *  广告曝光成功
@@ -99,11 +94,35 @@
 - (void)unionAdClicked:(UIView *)nativeAdView nativeAdDataObject:(BaiduMobAdNativeAdObject *)object;
 
 /**
- * 智能优选负反馈的选择
+ *  反馈弹窗展示
+ *  @param adView 当前的广告视图
  */
-- (void)smartFeedbackSelectedWithObject:(BaiduMobAdNativeAdObject *)object;
+- (void)nativeAdDislikeShow:(UIView *)adView;
+
+/**
+ *  反馈弹窗点击
+ *  @param adView 当前的广告视图
+ */
+- (void)nativeAdDislikeClick:(UIView *)adView;
+
+/**
+ *  反馈弹窗关闭
+ *  @param adView 当前的广告视图
+ */
+- (void)nativeAdDislikeClose:(UIView *)adView;
 
 #pragma mark - Deprecated
+
+/**
+ * 智能优选负反馈的选择
+ */
+- (void)smartFeedbackSelectedWithObject:(BaiduMobAdNativeAdObject *)object BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdDislikeClick:");
+
+/**
+ *  广告请求失败
+ *  失败的类型 BaiduMobFailReason
+ */
+- (void)nativeAdsFailLoad:(BaiduMobFailReason)reason nativeAd:(BaiduMobAdNative *)nativeAd BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdsFailLoadCode:message:nativeAd:");
 
 - (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdObjectsSuccessLoad:nativeAd:");
 

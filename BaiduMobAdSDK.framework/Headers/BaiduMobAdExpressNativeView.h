@@ -12,29 +12,34 @@
 @interface BaiduMobAdExpressNativeView : UIView
 
 /**
- 信息流广告容器宽,不设置默认屏幕宽。如需需改，先设置后，再render
+ * 信息流广告容器宽度，默认屏幕宽。需要在render前配置
  */
 @property (nonatomic, assign) CGFloat width;
 
 /**
- 信息流广告容器高,render成功回调后，生效。
+ * 信息流广告容器高,render成功回调后，生效。
  */
 @property (nonatomic, assign) CGFloat height;
 
 /**
- 是否渲染完毕
+ * 是否渲染完毕
  */
 @property (nonatomic, assign, readonly) BOOL isReady;
 
 /**
- 设置组件的当前ViewController，以打开落地页等，必选。
+ * 设置组件的当前ViewController，以打开落地页等，必选。
  */
 @property (nonatomic, weak) UIViewController *baseViewController;
 
 /**
- 组件渲染
+ * 渲染模板
  */
 - (void)render;
+
+/**
+ * 发送展现
+ */
+- (void)trackImpression;
 
 /**
  *  广告价格标签
@@ -57,5 +62,10 @@
  * 是否过期，默认为false，30分钟后过期，需要重新请求广告
  */
 - (BOOL)isExpired;
+
+/**
+ * 销毁模板，释放内存
+ */
+- (void)destroyExpressView;
 
 @end

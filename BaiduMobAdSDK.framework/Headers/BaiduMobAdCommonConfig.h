@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.86"
+#define SDK_VERSION_IN_MSSP @"4.861"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -29,9 +29,9 @@ typedef enum {
 } BaiduMobMaterialType;
 
 typedef enum {
-    BaiduMobNativeAdActionTypeLP = 1,
-    BaiduMobNativeAdActionTypeDL = 2,
-    BaiduMobNativeAdActionTypeDeepLink = 512
+    BaiduMobNativeAdActionTypeLP = 1,   // 落地页广告
+    BaiduMobNativeAdActionTypeDL = 2,   // 下载类广告
+    BaiduMobNativeAdActionTypeDeepLink = 512    // 唤醒类广告
 } BaiduMobNativeAdActionType;
 
 typedef enum {

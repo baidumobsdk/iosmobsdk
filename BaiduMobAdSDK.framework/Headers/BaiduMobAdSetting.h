@@ -53,5 +53,11 @@
  */
 - (BOOL)getLimitBaiduPersonalAds;
 
+/**
+ * 是否关闭摇一摇广告功能。注意：全产品生效，需媒体APP启动时进行set
+ * @param closeShake YES为关闭，默认不关闭
+ */
+- (void)setCloseShakeAds:(BOOL)closeShake;
+
 @end
 

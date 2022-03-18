@@ -36,7 +36,11 @@
  */
 @property (nonatomic, assign) BaiduMobAdType adType;
 
-
+/**
+ * 设置底价过滤，支持客户端与服务端bidding配置
+ * 仅支持整数值，单位：分
+ */
+@property (nonatomic, assign) int bidFloor;
 
 /**
  *  预加载视频广告，并缓存物料信息到本地。
