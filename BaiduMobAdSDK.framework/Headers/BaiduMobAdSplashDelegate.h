@@ -80,8 +80,17 @@
 /**
  * 开屏广告请求失败
  *
+ * @param errCode 错误码
+ * @param message 错误信息
  * @param splash 开屏广告对象
  */
-- (void)splashAdLoadFail:(BaiduMobAdSplash *)splash;
+- (void)splashAdLoadFailCode:(NSString *)errCode
+                     message:(NSString *)message
+                    splashAd:(BaiduMobAdSplash *)nativeAd;
+
+
+#pragma mark - Deprecated
+
+- (void)splashAdLoadFail:(BaiduMobAdSplash *)splash BaiduMobAdDEPRECATED_MSG("splashAdLoadFailCode:message:splashAd:");
 
 @end

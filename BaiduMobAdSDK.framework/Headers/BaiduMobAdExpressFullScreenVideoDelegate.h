@@ -23,7 +23,9 @@
 /**
  * 全屏视频广告请求失败
  */
-- (void)fullScreenVideoAdLoadFail:(BaiduMobAdExpressFullScreenVideo *)video;
+- (void)fullScreenVideoAdLoadFailCode:(NSString *)errCode
+                              message:(NSString *)message
+                         fullScreenAd:(BaiduMobAdExpressFullScreenVideo *)video;
 
 #pragma mark - 视频缓存delegate
 /**
@@ -70,5 +72,9 @@
  @param progress 当前播放进度 单位百分比
  */
 - (void)fullScreenVideoAdDidClick:(BaiduMobAdExpressFullScreenVideo *)video withPlayingProgress:(CGFloat)progress;
+
+
+#pragma mark - Deprecated
+- (void)fullScreenVideoAdLoadFail:(BaiduMobAdExpressFullScreenVideo *)video BaiduMobAdDEPRECATED_MSG("fullScreenVideoAdLoadFailCode:message:fullScreenAd:");
 
 @end

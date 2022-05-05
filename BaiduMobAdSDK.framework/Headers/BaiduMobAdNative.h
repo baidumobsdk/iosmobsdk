@@ -77,16 +77,15 @@
 @property (nonatomic, assign) int bidFloor;
 
 /**
- *  请求原生广告
+ * 是否请求优选模板广告，默认请求元素广告
+ */
+@property (nonatomic, assign) BOOL isExpressNativeAds;
+
+/**
+ *  请求信息流广告
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */
 - (void)requestNativeAds;
-
-/**
- *  请求原生广告(组件)
- *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
- */
-- (void)requestExpressNativeAds;
 
 /**
  *  预加载视频素材  如果有多条素材会在所以素材均缓存完毕后回调nativeVideoAdCacheSuccess
@@ -112,5 +111,7 @@
 @property (nonatomic, copy) NSString *adId BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换AdUnitTag使用方式");
 
 - (void)requestNativeAdsWithParameters:(BaiduMobAdFeedRequestParameters *)requestParameters BaiduMobAdDEPRECATED_MSG("已废弃，请及时参考Demo修改使用方式");
+
+- (void)requestExpressNativeAds BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换isExpressNativeAds使用方式");
 
 @end

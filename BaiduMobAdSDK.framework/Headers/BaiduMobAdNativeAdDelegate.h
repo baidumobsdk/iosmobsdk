@@ -49,7 +49,7 @@
 /**
  * 广告请求成功
  * 请求成功的数组，如果只成功返回一条原生广告，数组大小为1
- * 注意：如果是返回元素，nativeAds为BaiduMobAdNativeAdObject数组。如果是模板智选，nativeAds为BaiduMobAdExpressNativeView数组
+ * 注意：如果是返回元素，nativeAds为BaiduMobAdNativeAdObject数组。如果是优选模板，nativeAds为BaiduMobAdExpressNativeView数组
  */
 - (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds nativeAd:(BaiduMobAdNative *)nativeAd;
 

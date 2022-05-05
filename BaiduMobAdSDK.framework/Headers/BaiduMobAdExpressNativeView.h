@@ -8,18 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "BaiduMobAdCommonConfig.h"
+
+typedef enum {
+    BaiduMobAdExpressNativeNormalTheme = 0, // 默认 普通主题
+    BaiduMobAdExpressNativeDarkTheme = 1  // 黑夜模式
+} BaiduMobAdExpressNativeTheme;
 
 @interface BaiduMobAdExpressNativeView : UIView
 
 /**
- * 信息流广告容器宽度，默认屏幕宽。需要在render前配置
+ * 优选模板容器宽度，默认为屏幕宽，需要在render调用前配置
  */
 @property (nonatomic, assign) CGFloat width;
 
 /**
- * 信息流广告容器高,render成功回调后，生效。
+ * 优选模板高度，调用render后可以获取模板高度
  */
-@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign, readonly) CGFloat height;
 
 /**
  * 是否渲染完毕
@@ -30,6 +36,16 @@
  * 设置组件的当前ViewController，以打开落地页等，必选。
  */
 @property (nonatomic, weak) UIViewController *baseViewController;
+
+/**
+ * 信息流优选模板广告样式类型
+ */
+@property (nonatomic, assign) BaiduMobAdSmartFeedStyleType style_type;
+
+/**
+ * 设置优选模板主题
+ */
+- (void)setExpressTheme:(BaiduMobAdExpressNativeTheme)theme;
 
 /**
  * 渲染模板

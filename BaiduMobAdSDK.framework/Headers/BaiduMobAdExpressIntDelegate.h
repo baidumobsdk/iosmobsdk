@@ -23,7 +23,9 @@
 /**
  * 广告请求失败
  */
-- (void)interstitialAdLoadFailed:(BaiduMobAdExpressInterstitial *)interstitial withError:(BaiduMobFailReason)reason;
+- (void)interstitialAdLoadFailCode:(NSString *)errCode
+                           message:(NSString *)message
+                    interstitialAd:(BaiduMobAdExpressInterstitial *)interstitial;
 
 /**
  *  广告曝光成功
@@ -67,6 +69,9 @@
  *  视频缓存失败
  */
 - (void)interstitialAdDownLoadFailed:(BaiduMobAdExpressInterstitial *)interstitial;
+
+#pragma mark - Deprecated
+- (void)interstitialAdLoadFailed:(BaiduMobAdExpressInterstitial *)interstitial withError:(BaiduMobFailReason)reason BaiduMobAdDEPRECATED_MSG("interstitialAdFailCode:message:interstitialAd:");
 
 @end
 
