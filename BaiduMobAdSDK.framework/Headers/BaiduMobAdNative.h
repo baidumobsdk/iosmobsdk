@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BaiduMobAdNativeAdDelegate.h"
 #import "BaiduMobAdFeedRequestParameters.h"
+#import "BaiduMobAdNativeInterationDelegate.h"
 
 @class BaiduMobAdNativeAdView;
 
@@ -24,10 +25,11 @@
  */
 @property (nonatomic, copy) NSString *adUnitTag;
 
+#warning 注意！！接入变更：信息流广告原有delegate已经废弃，广告请求和行为delegate拆分为两个adDelegate和InterationDelegate
 /**
- * 原生广告delegate
+ * 广告请求 delegate
  */
-@property (nonatomic, weak) id<BaiduMobAdNativeAdDelegate> delegate;
+@property (nonatomic, weak) id<BaiduMobAdNativeAdDelegate> adDelegate;
 
 /**
  * 针对视频缓存delegate

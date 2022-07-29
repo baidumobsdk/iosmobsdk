@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.881"
+#define SDK_VERSION_IN_MSSP @"4.89"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -126,15 +126,15 @@ typedef enum {
  * 用户选择的反馈原因
  */
 typedef NS_ENUM(NSInteger, BaiduMobAdDislikeReasonType) {
-    BaiduMobAdDislikeCancel = -1, // 取消点击
-    BaiduMobAdUnlike = 0, // 不感兴趣
-    BaiduMobAdLowQuality, // 内容质量差
-    BaiduMobAdRepeatRecommend, // 推荐重复
-    BaiduMobAdVulgarPornography, // 低俗色情
-    BaiduMobAdViolatingLaws, // 违法违规
-    BaiduMobAdFake, // 虚假欺诈
-    BaiduMobAdInducedClick, // 诱导点击
-    BaiduMobAdSuspectedPlagiarism // 疑似抄袭
+    BaiduMobAdDislikeReasonCancel = -1, // 取消点击
+    BaiduMobAdDislikeReasonUnlike = 0, // 不感兴趣
+    BaiduMobAdDislikeReasonLowQuality, // 内容质量差
+    BaiduMobAdDislikeReasonRepeatRecommend, // 推荐重复
+    BaiduMobAdDislikeReasonVulgarPornography, // 低俗色情
+    BaiduMobAdDislikeReasonViolatingLaws, // 违法违规
+    BaiduMobAdDislikeReasonFake, // 虚假欺诈
+    BaiduMobAdDislikeReasonInducedClick, // 诱导点击
+    BaiduMobAdDislikeReasonSuspectedPlagiarism // 疑似抄袭
 };
 
 /**

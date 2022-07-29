@@ -54,81 +54,17 @@
 - (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds nativeAd:(BaiduMobAdNative *)nativeAd;
 
 /**
- * BaiduMobAdExpressNativeView组件渲染成功
- */
-- (void)nativeAdExpressSuccessRender:(BaiduMobAdExpressNativeView *)express
-                            nativeAd:(BaiduMobAdNative *)nativeAd;
-
-/**
  *  广告请求失败
  */
 - (void)nativeAdsFailLoadCode:(NSString *)errCode
                       message:(NSString *)message
                      nativeAd:(BaiduMobAdNative *)nativeAd;
 
-/**
- *  广告曝光成功
- */
-- (void)nativeAdExposure:(UIView *)nativeAdView nativeAdDataObject:(BaiduMobAdNativeAdObject *)object;
-
-/**
- *  广告曝光失败
- */
-- (void)nativeAdExposureFail:(UIView *)nativeAdView
-          nativeAdDataObject:(BaiduMobAdNativeAdObject *)object
-                  failReason:(int)reason;
-
-/**
- *  广告点击
- */
-- (void)nativeAdClicked:(UIView *)nativeAdView nativeAdDataObject:(BaiduMobAdNativeAdObject *)object;
-
-/**
- *  广告详情页关闭
- */
-- (void)didDismissLandingPage:(UIView *)nativeAdView;
-
-/**
- *  联盟官网点击跳转
- */
-- (void)unionAdClicked:(UIView *)nativeAdView nativeAdDataObject:(BaiduMobAdNativeAdObject *)object;
-
-/**
- *  反馈弹窗展示
- *  @param adView 当前的广告视图
- */
-- (void)nativeAdDislikeShow:(UIView *)adView;
-
-/**
- *  反馈弹窗点击
- *  @param adView 当前的广告视图
- */
-- (void)nativeAdDislikeClick:(UIView *)adView;
-
-/**
- *  反馈弹窗关闭
- *  @param adView 当前的广告视图
- */
-- (void)nativeAdDislikeClose:(UIView *)adView;
-
 #pragma mark - Deprecated
 
-/**
- * 智能优选负反馈的选择
- */
 - (void)smartFeedbackSelectedWithObject:(BaiduMobAdNativeAdObject *)object BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdDislikeClick:");
 
-/**
- *  广告请求失败
- *  失败的类型 BaiduMobFailReason
- */
 - (void)nativeAdsFailLoad:(BaiduMobFailReason)reason nativeAd:(BaiduMobAdNative *)nativeAd BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdsFailLoadCode:message:nativeAd:");
-
-- (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdObjectsSuccessLoad:nativeAd:");
-
-- (void)nativeAdsFailLoad:(BaiduMobFailReason)reason BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdsFailLoad:nativeAd:");
-
-- (void)nativeAdClicked:(UIView *)nativeAdView BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdClicked:nativeAdDataObject:");
 
 @end
 

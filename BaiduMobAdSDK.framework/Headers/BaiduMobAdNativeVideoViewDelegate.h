@@ -46,4 +46,11 @@
  */
 - (void)nativeVideoAdDidFailed:(BaiduMobAdNativeVideoView *)videoView;
 
+/**
+ 视频首帧播放
+ 
+ @param videoView self
+ */
+- (void)nativeVideoAdDidReadyForDisplay:(BaiduMobAdNativeVideoView *)videoView;
+
 @end

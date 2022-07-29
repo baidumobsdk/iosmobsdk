@@ -9,7 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "BaiduMobAdCommonConfig.h"
 
+@protocol BaiduMobAdNativeInterationDelegate;
+
 @interface BaiduMobAdNativeAdObject : NSObject
+
+/**
+ * 广告交互 delegate
+ */
+@property (nonatomic, weak) id <BaiduMobAdNativeInterationDelegate> interationDelegate;
 
 /**
  * 标题 text

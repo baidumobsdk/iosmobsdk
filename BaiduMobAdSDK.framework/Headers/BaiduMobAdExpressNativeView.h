@@ -10,12 +10,19 @@
 #import <UIKit/UIKit.h>
 #import "BaiduMobAdCommonConfig.h"
 
+@protocol BaiduMobAdNativeInterationDelegate;
+
 typedef enum {
     BaiduMobAdExpressNativeNormalTheme = 0, // 默认 普通主题
     BaiduMobAdExpressNativeDarkTheme = 1  // 黑夜模式
 } BaiduMobAdExpressNativeTheme;
 
 @interface BaiduMobAdExpressNativeView : UIView
+
+/**
+ * 广告交互 delegate
+ */
+@property (nonatomic, weak) id <BaiduMobAdNativeInterationDelegate> interationDelegate;
 
 /**
  * 优选模板容器宽度，默认为屏幕宽，需要在render调用前配置
