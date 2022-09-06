@@ -54,10 +54,26 @@
 - (BOOL)getLimitBaiduPersonalAds;
 
 /**
+ * 限制个性化CPU
+ * @param limit YES限制，默认NO
+ */
+- (void)setLimitBaiduPersonalCPUs:(BOOL)limit;
+
+/**
+ * 获取个性化CPU限制状态，默认不限制
+ */
+- (BOOL)getLimitBaiduPersonalCPUs;
+
+/**
  * 是否关闭摇一摇广告功能。注意：全产品生效，需媒体APP启动时进行set
  * @param closeShake YES为关闭，默认不关闭
  */
 - (void)setCloseShakeAds:(BOOL)closeShake;
+
+/**
+ * 设置微信openSDK的appid和universalLink
+ */
+- (void)setWXAppId:(NSString *)appid universalLink:(NSString *)universalLink;
 
 @end
 

@@ -110,6 +110,10 @@
  */
 @property (nonatomic, assign) int container_height;
 
+/**
+ *  使用controller present 落地页，覆盖BaiduMobAdNative的配置
+ */
+- (void)setPresentAdViewController:(UIViewController *)presentAdViewController;
 
 /**
  *  广告价格标签
