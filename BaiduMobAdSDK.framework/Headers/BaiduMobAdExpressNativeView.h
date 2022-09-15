@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BaiduMobAdCommonConfig.h"
+#import "BaiduMobAdExpressNativeData.h"
 
 @protocol BaiduMobAdNativeInterationDelegate;
 
@@ -48,6 +49,11 @@ typedef enum {
  * 信息流优选模板广告样式类型
  */
 @property (nonatomic, assign) BaiduMobAdSmartFeedStyleType style_type;
+
+/**
+ * 负反馈后获取广告物料信息
+ */
+@property (nonatomic, strong) BaiduMobAdExpressNativeData *adData;
 
 /**
  * 设置优选模板主题

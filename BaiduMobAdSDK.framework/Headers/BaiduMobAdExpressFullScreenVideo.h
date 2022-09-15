@@ -56,14 +56,14 @@
 
 /**
  *  展示全屏视频，默认RootViewController present
- *  默认使用本地缓存，本地缓存失效则在线请求
+ *  默认使用本地缓存，本地缓存失效则在线请求播放
  */
 - (void)show;
 
 
 /**
  *  展示全屏视频，使用controller present
- *  默认使用本地缓存，本地缓存失效则在线请求
+ *  默认使用本地缓存，本地缓存失效则在线请求播放
  */
 - (void)showFromViewController:(UIViewController *)controller;
 
