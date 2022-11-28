@@ -8,9 +8,9 @@ SDK从4.84版本开始不再支持armv7s，i386架构
 
 # 版本更新说明
 
-- **SDK版本**：v4.901
-- **插屏模板优化**
-- **信息流样式优化**
+- **SDK版本**：v5.10
+- **激励视频、开屏、插屏、信息流场景样式优化**
+- **iOS16系统适配**
 - **修复已知问题及性能优化**
 
 # 开发环境
@@ -26,7 +26,7 @@ SDK从4.84版本开始不再支持armv7s，i386架构
 
   开发者需在百度联盟(百青藤)上进行注册，在平台审核通过后，开发者就成为了百度广告联盟的正式会员。
 
-- 查看[接入文档](https://union.baidu.com/miniappblog/2020/08/11/iOSSDK/)，全面了解BaiduMobAdSDK中提供的所有API。
+- 查看[接入文档](https://union.baidu.com/miniappblog/sdk/iOSSDK.html)，全面了解BaiduMobAdSDK中提供的所有API。
 
 - 如有其他问题可以参考官网的[FAQ](https://union.baidu.com/bqt/#/help)，或者及时与我们联系。
 

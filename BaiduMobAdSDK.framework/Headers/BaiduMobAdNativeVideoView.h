@@ -27,7 +27,7 @@
 - (instancetype)initWithFrame:(CGRect)frame andObject:(BaiduMobAdNativeAdObject *)object;
 
 /**
- 设置AVAudioSessionCategory，play之前调用，默认：AVAudioSessionCategoryAmbient
+ 设置AVAudioSessionCategory，play之前调用
  */
 - (void)setAudioSessionCategory:(AVAudioSessionCategory)category;
 

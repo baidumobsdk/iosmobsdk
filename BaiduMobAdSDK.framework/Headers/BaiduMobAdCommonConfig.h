@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"4.901"
+#define SDK_VERSION_IN_MSSP @"5.10"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -18,7 +18,8 @@ typedef enum {
     BaiduMobAdTypePortrait = 1,  // 竖版视频广告
     BaiduMobAdTypeRewardVideo = 2,  // 激励视频
     BaiduMobAdTypeFullScreenVideo = 3,   // 全屏视频
-    BaiduMobAdTypeExpressInterstitial = 4   // 模板插屏
+    BaiduMobAdTypeExpressInterstitial = 4,   // 模板插屏
+    BaiduMobAdTypeSearchQuery = 5 // 搜一搜
 } BaiduMobAdType;
 
 typedef enum {
@@ -53,7 +54,9 @@ typedef enum {
     onReplay, //重播
     onPlayEnd, // 播放终止，横、竖版视频
     onMute, // 静音按钮点击
-    onReady // 准备播放
+    onReady, // 准备播放
+    onPlay, // 调用播放
+    onFrozen // 播放器卡顿
     
 } BaiduAdNativeVideoEvent;
 

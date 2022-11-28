@@ -14,6 +14,7 @@
 
 @class BaiduMobAdNative;
 @class BaiduMobAdNativeAdObject;
+@class BaiduMobAdExpressNativeView;
 
 @protocol BaiduMobAdNativeInterationDelegate <NSObject>
 

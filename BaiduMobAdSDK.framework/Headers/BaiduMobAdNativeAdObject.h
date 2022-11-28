@@ -133,7 +133,7 @@
 - (void)biddingFail:(NSString *)reason;
 
 /**
- * 是否过期，默认为false，30分钟后过期，需要重新请求广告
+ * 是否过期，默认为false，2h后过期，需要重新请求广告
  */
 - (BOOL)isExpired;
 

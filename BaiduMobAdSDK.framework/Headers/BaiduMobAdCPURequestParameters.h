@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 extern NSString *CPUFontSizeType_SMALL;
 extern NSString *CPUFontSizeType_REGULAR;
 extern NSString *CPUFontSizeType_LARGE;
 extern NSString *CPUFontSizeType_EXTRA_LARGE;
 extern NSString *CPUFontSizeType_XX_LARGE;
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface BaiduMobAdCPURequestParameters : NSObject
 
