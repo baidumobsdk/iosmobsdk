@@ -50,8 +50,14 @@ extern NSString *QUERY_WORD;
 // 用于添加key-value，媒体可自定义key-value
 - (void)addParametersKey:(NSString *)key value:(NSString *)value;
 
-// 获取传参内容信息
+// 用于添加key-value，媒体可自定义key-value 新通路，ext字段获取
+- (void)addCustExtParametersKey:(NSString *)key value:(NSString *)value;
+
+// 获取信息流通路传参内容信息
 - (NSMutableDictionary *)getFeedRequestParametersDic;
+
+// 获取非信息流通路传参内容信息
+- (NSMutableDictionary *)getRequestParametersDic;
 
 @property (nonatomic, strong, readonly) NSString *USER_SEX BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换USER_SEX使用方式");
 @property (nonatomic, strong, readonly) NSString *FAVORITE_BOOK BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换FAVORITE_BOOK使用方式");

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "BaiduMobAdRewardVideoDelegate.h"
+#import "BaiduMobAdFeedRequestParameters.h"
+
 
 
 @interface BaiduMobAdRewardVideo : NSObject
@@ -16,6 +18,12 @@
  *  委托对象
  */
 @property (nonatomic, weak) id <BaiduMobAdRewardVideoDelegate> delegate;
+
+/**
+ * 激励视频传参
+ */
+@property (nonatomic, strong) BaiduMobAdFeedRequestParameters *requestParameters;
+
 
 /**
  *  应用的APPID
@@ -95,9 +103,18 @@
 
 /**
  * 反馈竞价失败及原因
- * @param reason 失败原因
+ * @param reason 失败原因，参考文档附录
  */
 - (void)biddingFail:(NSString *)reason;
+
+/**
+ * 反馈竞价失败及原因
+ * @param reason 失败原因，参考文档附录
+ * @param winInfo 竞胜方的信息，
+ *        Key：ecpm Value：为本次竞胜方出价（单位：分），类型为Integer。选填
+ *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
+ */
+- (void)biddingFail:(NSString *)reason winInfo:(NSDictionary *)winInfo;
 
 /**
  * 获取Bidding token

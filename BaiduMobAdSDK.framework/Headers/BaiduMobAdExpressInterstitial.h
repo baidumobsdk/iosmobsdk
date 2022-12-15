@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BaiduMobAdExpressIntDelegate.h"
+#import "BaiduMobAdFeedRequestParameters.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  应用的APPID
  */
 @property (nonatomic, copy) NSString *publisherId;
+
+/**
+ * 模版插屏传参
+ */
+@property (nonatomic, strong) BaiduMobAdFeedRequestParameters *requestParameters;
 
 /**
  *  设置/获取代码位(广告位)id
@@ -70,9 +77,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * 反馈竞价失败及原因
- * @param reason 失败原因
+ * @param reason 失败原因，参考文档附录
  */
 - (void)biddingFail:(NSString *)reason;
+
+/**
+ * 反馈竞价失败及原因
+ * @param reason 失败原因，参考文档附录
+ * @param winInfo 竞胜方的信息，
+ *        Key：ecpm Value：为本次竞胜方出价（单位：分），类型为Integer。选填
+ *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
+ */
+- (void)biddingFail:(NSString *)reason winInfo:(NSDictionary *)winInfo;
+
 
 /**
  * 获取Bidding token
