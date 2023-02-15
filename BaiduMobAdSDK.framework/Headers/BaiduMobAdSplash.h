@@ -17,6 +17,27 @@
  */
 @property (nonatomic, weak) id <BaiduMobAdSplashDelegate> delegate;
 
+/**
+ * 开屏点睛-卡片样式delegate
+ */
+@property (nonatomic, weak) id <BaiduMobAdSplashCardViewDelegate> cardDelegate;
+
+/**
+ * 开屏点睛-icon样式delegate
+ */
+@property (nonatomic, weak) id <BaiduMobAdSplashFocusZoomOutViewDelegate> zoomOutDelegate;
+
+/**
+ * 是否支持开屏点睛-卡片样式
+ * 广告返回后获取，不可set
+ */
+@property (nonatomic, assign, readonly) BOOL hasCardView;
+
+/**
+ * 是否支持开屏点睛-icon样式
+ * 广告返回后获取，不可set
+ */
+@property (nonatomic, assign, readonly) BOOL hasZoomOutView;
 
 /**
  *  设置/获取代码位id
@@ -49,15 +70,26 @@
 @property (nonatomic, weak) UIViewController *presentAdViewController;
 
 /**
- * 设置摇一摇图片的尺寸高或宽，默认69pt
+ * 设置摇一摇的尺寸高或宽，摇一摇默认69pt
  */
 @property (nonatomic, assign) CGFloat shakeImageViewSize;
+/**
+ * 设置扭一扭图片的尺寸高，默认63pt
+ */
+@property (nonatomic, assign) CGFloat twistImageViewSize;
+
+//扭一扭蒙层颜色
+@property (nonatomic, strong) UIColor *twistMaskColor;
 
 /**
  * 设置底价过滤，支持客户端与服务端bidding配置
  * 仅支持整数值，单位：分
  */
 @property (nonatomic, assign) int bidFloor;
+
+
+
+
 
 
 /**
@@ -75,6 +107,27 @@
  */
 - (void)loadAndDisplayUsingContainerView:(UIView *)view;
 
+/**
+ * 展示开屏点睛-卡片样式
+ * 注意：若渲染该样式，需要实现cardDelegate
+ * 不要释放开屏对象，否则回调无法正常回调
+ * @param viewController 用于展示卡片的VC
+ */
+- (void)showCardViewInViewController:(UIViewController *)viewController;
+
+/**
+ * 展示开屏点睛-icon样式
+ * 注意：若渲染该样式，需要实现zoomOutDelegate
+ * 不要释放开屏对象，否则回调无法正常回调
+ * @param viewController 用于展示卡片的VC
+ */
+- (void)showZoomOutViewInViewController:(UIViewController *)viewController;
+
+/**
+ * 展示广告
+ * @param viewController 展示广告所在的VC
+*/
+- (void)showSplashViewInViewController:(UIViewController *)viewController;
 
 /**
  * 请求开屏广告，仅请求不做展示，需要手动调用show展示广告

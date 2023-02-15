@@ -94,3 +94,24 @@
 - (void)splashAdLoadFail:(BaiduMobAdSplash *)splash BaiduMobAdDEPRECATED_MSG("splashAdLoadFailCode:message:splashAd:");
 
 @end
+
+@protocol BaiduMobAdSplashCardViewDelegate <NSObject>
+
+- (void)splashCardViewDidExposure:(BaiduMobAdSplash *)splash;
+
+- (void)splashCardViewDidClicked:(BaiduMobAdSplash *)splash;
+
+- (void)splashCardViewDidClose:(BaiduMobAdSplash *)splash;
+
+@end
+
+@protocol BaiduMobAdSplashFocusZoomOutViewDelegate <NSObject>
+
+- (void)splashFocusZoomOutViewDidExposure:(BaiduMobAdSplash *)splash;
+
+- (void)splashFocusZoomOutViewDidClicked:(BaiduMobAdSplash *)splash;
+
+- (void)splashFocusZoomOutViewDidClose:(BaiduMobAdSplash *)splash;
+
+@end
+
