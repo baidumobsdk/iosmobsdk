@@ -41,10 +41,10 @@ NS_ASSUME_NONNULL_BEGIN
                animationWidth:(CGFloat)animationWidth
               animationHeight:(CGFloat)animationHeight
                      adObject:(BaiduMobAdNativeAdObject *)object;
-// 动画播放
+// 播放动画
 - (void)startSlideAnimation;
 
-// 销毁
+// 销毁组件，回收内存
 - (void)destorySlideView;
 
 @end

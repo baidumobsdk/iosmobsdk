@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"5.121"
+#define SDK_VERSION_IN_MSSP @"5.13"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -105,7 +105,8 @@ typedef NS_ENUM(NSInteger, BaiduMobAdSmartFeedStyleType) {
     FeedType_GROUP_PIC = 35,//三图图文
     FeedType_GROUP_PIC_LOGO = 36,//三图图文+logo
     FeedType_VIDEO_TOP_TITLE = 37, //横版视频+文字
-    FeedType_PORTRAIT_VIDEO = 41 // 竖版视频
+    FeedType_PORTRAIT_VIDEO = 41, // 竖版视频
+    FeedType_PORTRAIT_IMAGE = 42 // 竖版图片
 };
 
 /**
