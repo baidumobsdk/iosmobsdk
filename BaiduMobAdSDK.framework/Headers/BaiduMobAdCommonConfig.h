@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"5.14"
+#define SDK_VERSION_IN_MSSP @"5.30"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 

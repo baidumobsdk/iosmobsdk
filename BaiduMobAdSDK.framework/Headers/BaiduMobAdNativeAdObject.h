@@ -164,6 +164,13 @@
  */
 - (void)baiduLogoClick:(UIView *)baiduLogoView;
 
+/**
+ * 根据key获取广告相关字段
+ * @param key 需要获取的key字段
+ * @return 字段的字符串
+ */
+- (NSString *)getAdDataForKey:(NSString *)key;
+
 #pragma mark - DEPRECATED_ATTRIBUTE
 
 - (void)trackVideoEvent:(BaiduAdNativeVideoEvent)event withCurrentTime:(NSTimeInterval)currentPlaybackTime BaiduMobAdDEPRECATED_MSG("已废弃，请使用videoReport");

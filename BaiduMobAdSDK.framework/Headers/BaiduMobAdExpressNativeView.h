@@ -106,4 +106,11 @@ typedef enum {
  */
 - (void)destroyExpressView;
 
+/**
+ * 根据key获取广告相关字段
+ * @param key 需要获取的key字段
+ * @return 字段的字符串
+ */
+- (NSString *)getAdDataForKey:(NSString *)key;
+
 @end

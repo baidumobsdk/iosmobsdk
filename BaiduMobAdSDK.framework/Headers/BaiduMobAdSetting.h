@@ -35,12 +35,12 @@
 
  @param enable YES开启  默认YES
  */
-- (void)setBDPermissionEnable:(BOOL)enable;
+- (void)setBDPermissionEnable:(BOOL)enable BaiduMobAdDEPRECATED_MSG("已废弃，需要调整功能请联系商务/运营同学");
 
 /**
  * 获取CAID开关状态，默认开启。
  */
-- (BOOL)getBDPermission;
+- (BOOL)getBDPermission BaiduMobAdDEPRECATED_MSG("已废弃，需要调整功能请联系商务/运营同学");
 
 /**
  * 限制个性化广告
