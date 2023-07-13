@@ -88,6 +88,17 @@
                      message:(NSString *)message
                     splashAd:(BaiduMobAdSplash *)nativeAd;
 
+/**
+ * 开屏广告缓存成功
+ */
+- (void)splashAdCacheSuccess:(BaiduMobAdSplash *)splash;
+
+/**
+ * 开屏广告缓存失败
+ */
+- (void)splashAdCacheFail:(BaiduMobAdSplash *)splash;
+
+
 
 #pragma mark - Deprecated
 
