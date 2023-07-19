@@ -75,5 +75,10 @@
  */
 - (void)setWXAppId:(NSString *)appid universalLink:(NSString *)universalLink;
 
+/**
+ * 获取SDK Version
+ */
+- (NSString *)getSDKVersion;
+
 @end
 
