@@ -66,6 +66,13 @@
  */
 - (void)nativeAdDislikeClose:(UIView *)adView;
 
+
+/**
+ *  关闭按钮点击
+ *  @param adView 当前的广告视图
+ */
+- (void)nativeAdCloseClick:(UIView *)adView;
+
 /**
  *  视频缓存成功
  */
