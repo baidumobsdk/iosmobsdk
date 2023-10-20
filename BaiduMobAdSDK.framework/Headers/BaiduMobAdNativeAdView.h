@@ -69,6 +69,12 @@
  */
 @property (strong, nonatomic) BaiduMobAdNativeWebView *webView;
 
+
+/**
+ * 关闭按钮 view
+ */
+@property (strong, nonatomic) UIButton *closeButton;
+
 /**
  *  展示用的vc, 可以不传
  */
