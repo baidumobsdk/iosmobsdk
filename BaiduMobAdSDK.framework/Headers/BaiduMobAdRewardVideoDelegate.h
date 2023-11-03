@@ -47,6 +47,11 @@
 - (void)rewardedVideoAdDidStarted:(BaiduMobAdRewardVideo *)video;
 
 /**
+ *  广告曝光成功
+ */
+- (void)rewardedVideoAdDidExposured:(BaiduMobAdRewardVideo *)video;
+
+/**
  *  广告展示失败
  */
 - (void)rewardedVideoAdShowFailed:(BaiduMobAdRewardVideo *)video withError:(BaiduMobFailReason)reason;
