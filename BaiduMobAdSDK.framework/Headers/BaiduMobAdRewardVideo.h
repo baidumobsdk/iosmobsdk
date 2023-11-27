@@ -41,11 +41,6 @@
 @property (nonatomic, assign) BOOL enableLocation;
 
 /**
- *  是否使用激励倒计时
- */
-@property (nonatomic, assign) BOOL useRewardCountdown;
-
-/**
  * 设置用户id
  */
 @property (nonatomic, strong) NSString *userID;

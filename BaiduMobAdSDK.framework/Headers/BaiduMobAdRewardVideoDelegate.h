@@ -75,11 +75,19 @@
  */
 - (void)rewardedVideoAdDidSkip:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
 
+#warning 5.33版本回调时机变更：原rewardedVideoAdDidClose关闭回调拆分为DidClose和WillClose两个回调。新增willClose接口回调时机等同于原DidClose回调时机，新DidClose将在页面完全关闭后回调。
 /**
- *  视频正常播放完毕，或者视频跳过后，尾帧关闭
+ *  用户点击关闭，激励视频视图关闭
  @param progress 当前播放进度 单位百分比 （注意浮点数）
  */
 - (void)rewardedVideoAdDidClose:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
+
+
+/**
+ *  用户点击关闭，激励视频视图即将关闭
+ @param progress 当前播放进度 单位百分比 （注意浮点数）
+ */
+- (void)rewardedVideoAdWillClose:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
 
 /**
  *  用户点击下载/查看详情
