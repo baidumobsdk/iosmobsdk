@@ -87,6 +87,15 @@
 - (void)biddingSuccess:(NSString *)secondPrice;
 
 /**
+ * 竞价成功，上报竞价失败排名第二的信息
+ * @param secondPrice 排名第二的价格
+ * @param secondInfo 竞败方，排名第二的信息
+ *        Key：ecpm Value：为本次竞败方排名第二的价格（单位：分），类型为Integer。选填
+ *        Key：adn    Value：为本次竞败方排名第二的渠道ID，类型为Integer。具体ID枚举见文档
+ */
+- (void)biddingSuccess:(NSString *)secondPrice secondInfo:(NSDictionary *)secondInfo;
+
+/**
  * 反馈竞价失败及原因
  * @param reason 失败原因，参考文档附录
  */

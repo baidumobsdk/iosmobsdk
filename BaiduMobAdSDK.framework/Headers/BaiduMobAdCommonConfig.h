@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"5.3311"
+#define SDK_VERSION_IN_MSSP @"5.34"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -19,7 +19,8 @@ typedef enum {
     BaiduMobAdTypeRewardVideo = 2,  // 激励视频
     BaiduMobAdTypeFullScreenVideo = 3,   // 全屏视频
     BaiduMobAdTypeExpressInterstitial = 4,   // 模板插屏
-    BaiduMobAdTypeSearchQuery = 5 // 搜一搜
+    BaiduMobAdTypeSearchQuery = 5, // 搜一搜
+    BaiduMobAdTypeSplash = 6 // 开屏
 } BaiduMobAdType;
 
 typedef enum {
