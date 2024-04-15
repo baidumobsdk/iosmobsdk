@@ -52,6 +52,11 @@
 - (void)splashDidClicked:(BaiduMobAdSplash *)splash;
 
 /**
+ *  广告点击跳过
+ */
+- (void)splashSkipClick:(BaiduMobAdSplash *)splash;
+
+/**
  *  广告展示结束
  */
 - (void)splashDidDismissScreen:(BaiduMobAdSplash *)splash;
