@@ -33,6 +33,7 @@
 
 /**
  开始播放
+ 重要：建议广告非自动播放时调用
  */
 - (void)play;
 
@@ -83,11 +84,9 @@
 
 
 /**
-触发播放，仅设置wifi自动播放后生效。建议屏幕滑动停止后调用
+ 触发播放，仅设置wifi自动播放后生效。建议屏幕滑动停止后调用
+ 重要：5.351版本后，该接口可不调用，SDK内对视频曝光自检测
 */
 - (BOOL)render;
-
-#pragma mark - Deprecate
-- (BOOL)handleScrollStop BaiduMobAdDEPRECATED_MSG("已废弃");
 
 @end

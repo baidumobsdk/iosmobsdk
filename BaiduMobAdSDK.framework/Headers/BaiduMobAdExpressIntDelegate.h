@@ -13,8 +13,8 @@
 
 @protocol BaiduMobAdExpressIntDelegate <NSObject>
 
-@optional
-#pragma mark - 广告请求delegate
+@required
+
 /**
  * 广告请求成功
  */
@@ -27,6 +27,8 @@
                            message:(NSString *)message
                     interstitialAd:(BaiduMobAdExpressInterstitial *)interstitial;
 
+@optional
+#pragma mark - 广告请求delegate
 /**
  *  广告曝光成功
  */
@@ -70,8 +72,6 @@
  */
 - (void)interstitialAdDownLoadFailed:(BaiduMobAdExpressInterstitial *)interstitial;
 
-#pragma mark - Deprecated
-- (void)interstitialAdLoadFailed:(BaiduMobAdExpressInterstitial *)interstitial withError:(BaiduMobFailReason)reason BaiduMobAdDEPRECATED_MSG("interstitialAdFailCode:message:interstitialAd:");
 
 @end
 

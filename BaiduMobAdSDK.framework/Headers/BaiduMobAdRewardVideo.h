@@ -91,34 +91,23 @@
 - (NSString *)getECPMLevel;
 
 /**
- * 反馈竞价成功及二价
- * @param secondPrice 第二价格
- */
-- (void)biddingSuccess:(NSString *)secondPrice;
-
-/**
  * 竞价成功，上报竞价失败排名第二的信息
- * @param secondPrice 排名第二的价格
  * @param secondInfo 竞败方，排名第二的信息
  *        Key：ecpm Value：为本次竞败方排名第二的价格（单位：分），类型为Integer。选填
  *        Key：adn    Value：为本次竞败方排名第二的渠道ID，类型为Integer。具体ID枚举见文档
+ * @param completion 发送成功或失败回调
  */
-- (void)biddingSuccess:(NSString *)secondPrice secondInfo:(NSDictionary *)secondInfo;
+- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
- * 反馈竞价失败及原因
- * @param reason 失败原因，参考文档附录
- */
-- (void)biddingFail:(NSString *)reason;
-
-/**
- * 反馈竞价失败及原因
- * @param reason 失败原因，参考文档附录
- * @param winInfo 竞胜方的信息，
+ * 反馈竞价失败及原因，无广告返回时也可用此接口上报竞胜方信息
+ * @param winInfo 竞胜方的信息
  *        Key：ecpm Value：为本次竞胜方出价（单位：分），类型为Integer。选填
  *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
+ * @param completion 发送成功或失败回调
  */
-- (void)biddingFail:(NSString *)reason winInfo:(NSDictionary *)winInfo;
+- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
+
 
 /**
  * 获取Bidding token

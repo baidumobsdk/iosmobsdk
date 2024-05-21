@@ -19,6 +19,17 @@
  */
 - (NSString *)publisherId;
 
+/**
+ * 开屏广告请求失败
+ *
+ * @param errCode 错误码
+ * @param message 错误信息
+ * @param splash 开屏广告对象
+ */
+- (void)splashAdLoadFailCode:(NSString *)errCode
+                     message:(NSString *)message
+                    splashAd:(BaiduMobAdSplash *)splashAd;
+
 @optional
 
 /**
@@ -83,17 +94,6 @@
 - (void)splashAdLoadSuccess:(BaiduMobAdSplash *)splash;
 
 /**
- * 开屏广告请求失败
- *
- * @param errCode 错误码
- * @param message 错误信息
- * @param splash 开屏广告对象
- */
-- (void)splashAdLoadFailCode:(NSString *)errCode
-                     message:(NSString *)message
-                    splashAd:(BaiduMobAdSplash *)nativeAd;
-
-/**
  * 开屏广告缓存成功
  */
 - (void)splashAdCacheSuccess:(BaiduMobAdSplash *)splash;
@@ -102,12 +102,6 @@
  * 开屏广告缓存失败
  */
 - (void)splashAdCacheFail:(BaiduMobAdSplash *)splash;
-
-
-
-#pragma mark - Deprecated
-
-- (void)splashAdLoadFail:(BaiduMobAdSplash *)splash BaiduMobAdDEPRECATED_MSG("splashAdLoadFailCode:message:splashAd:");
 
 @end
 

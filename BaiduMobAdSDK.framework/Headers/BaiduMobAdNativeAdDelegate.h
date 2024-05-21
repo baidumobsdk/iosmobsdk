@@ -15,6 +15,24 @@
 
 @protocol BaiduMobAdNativeAdDelegate <NSObject>
 
+@required
+
+/**
+ * 广告请求成功
+ * 请求成功的数组，如果只成功返回一条原生广告，数组大小为1
+ * 注意：如果是返回元素，nativeAds为BaiduMobAdNativeAdObject数组。如果是优选模板，nativeAds为BaiduMobAdExpressNativeView数组
+ */
+- (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds nativeAd:(BaiduMobAdNative *)nativeAd;
+
+/**
+ * 广告请求失败
+ * adObject对象内仅有竞胜竞败能力，支持无广告返回时提供竞败信息上传
+ */
+- (void)nativeAdsFailLoadCode:(NSString *)errCode
+                      message:(NSString *)message
+                     nativeAd:(BaiduMobAdNative *)nativeAd
+                     adObject:(BaiduMobAdNativeAdObject *)adObject;
+
 @optional
 /**
  *  应用在mssp.baidu.com上的APPID
@@ -46,26 +64,14 @@
  */
 - (BOOL)enableLocation;//如果enable，plist 需要增加NSLocationWhenInUseUsageDescription
 
-/**
- * 广告请求成功
- * 请求成功的数组，如果只成功返回一条原生广告，数组大小为1
- * 注意：如果是返回元素，nativeAds为BaiduMobAdNativeAdObject数组。如果是优选模板，nativeAds为BaiduMobAdExpressNativeView数组
- */
-- (void)nativeAdObjectsSuccessLoad:(NSArray *)nativeAds nativeAd:(BaiduMobAdNative *)nativeAd;
 
 /**
  *  广告请求失败
  */
 - (void)nativeAdsFailLoadCode:(NSString *)errCode
                       message:(NSString *)message
-                     nativeAd:(BaiduMobAdNative *)nativeAd;
-
-#pragma mark - Deprecated
-
-- (void)smartFeedbackSelectedWithObject:(BaiduMobAdNativeAdObject *)object BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdDislikeClick:");
-
-- (void)nativeAdsFailLoad:(BaiduMobFailReason)reason nativeAd:(BaiduMobAdNative *)nativeAd BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdsFailLoadCode:message:nativeAd:");
-
+                     nativeAd:(BaiduMobAdNative *)nativeAd
+                    BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdsFailLoadCode:message:nativeAd:adObject:");
 @end
 
 #pragma mark - 视频缓存delegate

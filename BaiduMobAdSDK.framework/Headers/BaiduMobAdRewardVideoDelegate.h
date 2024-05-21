@@ -14,7 +14,8 @@
 
 @protocol BaiduMobAdRewardVideoDelegate <NSObject>
 
-@optional
+@required
+
 #pragma mark - 广告请求delegate
 /**
  * 激励视频广告请求成功
@@ -27,6 +28,8 @@
 - (void)rewardedAdLoadFailCode:(NSString *)errCode
                        message:(NSString *)message
                     rewardedAd:(BaiduMobAdRewardVideo *)video;
+
+@optional
 
 #pragma mark - 视频缓存delegate
 /**
@@ -94,10 +97,6 @@
  @param progress 当前播放进度 单位百分比
  */
 - (void)rewardedVideoAdDidClick:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
-
-#pragma mark - Deprecated
-
-- (void)rewardedAdLoadFail:(BaiduMobAdRewardVideo *)video BaiduMobAdDEPRECATED_MSG("rewardedAdLoadFailCode:message:rewardedAd:");
 
 
 @end

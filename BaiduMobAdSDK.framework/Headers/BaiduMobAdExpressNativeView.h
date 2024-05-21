@@ -35,6 +35,12 @@ typedef enum {
  */
 @property (nonatomic, assign, readonly) CGFloat height;
 
+
+/**
+ * 优选模板全屏样式宽高比，仅在竖版视频样式生效，设置宽除高的小数，设置后，以此比例计算尺寸渲染。
+ */
+@property (nonatomic, assign) CGFloat ratio;
+
 /**
  * 是否渲染完毕
  */
@@ -67,19 +73,14 @@ typedef enum {
 
 /**
  * 发送展现
+ * 注意：5.351版本以后，无需调用该接口，SDK内自检测模板广告曝光
  */
-- (void)trackImpression;
+- (void)trackImpression BaiduMobAdDEPRECATED_MSG("5.351以后将废弃，无需调用");
 
 /**
  *  广告价格标签
  */
 - (NSString *)getECPMLevel;
-
-/**
- * 反馈竞价成功及二价
- * @param secondPrice 第二价格
- */
-- (void)biddingSuccess:(NSString *)secondPrice;
 
 /**
  * 竞价成功，上报竞价失败排名第二的信息
@@ -88,22 +89,16 @@ typedef enum {
  *        Key：ecpm Value：为本次竞败方排名第二的价格（单位：分），类型为Integer。选填
  *        Key：adn    Value：为本次竞败方排名第二的渠道ID，类型为Integer。具体ID枚举见文档
  */
-- (void)biddingSuccess:(NSString *)secondPrice secondInfo:(NSDictionary *)secondInfo;
+- (void)biddingSuccessWithSecondInfo:(NSDictionary *)secondInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
- * 反馈竞价失败及原因
- * @param reason 失败原因，参考文档附录
- */
-- (void)biddingFail:(NSString *)reason;
-
-/**
- * 反馈竞价失败及原因
+ * 反馈竞价失败及原因，无广告返回时，请通过请求失败接口的adObject对象上报信息
  * @param reason 失败原因，参考文档附录
  * @param winInfo 竞胜方的信息，
  *        Key：ecpm Value：为本次竞胜方出价（单位：分），类型为Integer。选填
  *        Key：adn    Value：为本次竞胜方渠道ID，类型为Integer。具体ID枚举见文档
  */
-- (void)biddingFail:(NSString *)reason winInfo:(NSDictionary *)winInfo;
+- (void)biddingFailWithWinInfo:(NSDictionary *)winInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
 /**
  * 是否过期，默认为false，2h后过期，需要重新请求广告

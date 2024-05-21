@@ -13,7 +13,8 @@
 
 @protocol BaiduMobAdExpressFullScreenVideoDelegate <NSObject>
 
-@optional
+@required
+
 #pragma mark - 广告请求delegate
 /**
  * 全屏视频广告请求成功
@@ -26,6 +27,8 @@
 - (void)fullScreenVideoAdLoadFailCode:(NSString *)errCode
                               message:(NSString *)message
                          fullScreenAd:(BaiduMobAdExpressFullScreenVideo *)video;
+
+@optional
 
 #pragma mark - 视频缓存delegate
 /**
@@ -73,8 +76,5 @@
  */
 - (void)fullScreenVideoAdDidClick:(BaiduMobAdExpressFullScreenVideo *)video withPlayingProgress:(CGFloat)progress;
 
-
-#pragma mark - Deprecated
-- (void)fullScreenVideoAdLoadFail:(BaiduMobAdExpressFullScreenVideo *)video BaiduMobAdDEPRECATED_MSG("fullScreenVideoAdLoadFailCode:message:fullScreenAd:");
 
 @end
