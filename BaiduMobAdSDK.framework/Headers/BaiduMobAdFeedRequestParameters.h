@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 /**
  * 【信息流传参】各个参数字段的描述和取值可以参考如下注释
  * 注意：所有参数的总长度(不包含key值)建议控制在120个中文字符内，避免因超长发生截断，影响信息的上报
@@ -59,18 +59,5 @@ extern NSString *QUERY_WORD;
 // 获取非信息流通路传参内容信息
 - (NSMutableDictionary *)getRequestParametersDic;
 
-@property (nonatomic, strong, readonly) NSString *USER_SEX BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换USER_SEX使用方式");
-@property (nonatomic, strong, readonly) NSString *FAVORITE_BOOK BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换FAVORITE_BOOK使用方式");
-@property (nonatomic, strong, readonly) NSString *PAGE_TITLE BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换PAGE_TITLE使用方式");
-@property (nonatomic, strong, readonly) NSString *PAGE_ID BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换PAGE_ID使用方式");
-@property (nonatomic, strong, readonly) NSString *CONTENT_CATEGORY BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换CONTENT_CATEGORY使用方式");
-@property (nonatomic, strong, readonly) NSString *CONTENT_LABEL BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换CONTENT_LABEL使用方式");
-@property (nonatomic, strong, readonly) NSString *QUERY_WORD BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换QUERY_WORD使用方式");
-@property (nonatomic, strong, readonly) NSString *PAGE_AUTHOR_ID BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换PAGE_AUTHOR_ID使用方式");
-@property (nonatomic, strong, readonly) NSString *FIRST_LEVEL_CONTENTS BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换FIRST_LEVEL_CONTENTS使用方式");
-@property (nonatomic, strong, readonly) NSString *SECOND_LEVEL_CONTENTS BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换SECOND_LEVEL_CONTENTS使用方式");
-@property (nonatomic, strong, readonly) NSString *CHAPTER_NUM BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换CHAPTER_NUM使用方式");
-@property (nonatomic, strong, readonly) NSString *PAGE_SERIAL_STATUS BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换PAGE_SERIAL_STATUS使用方式");
-@property (nonatomic, strong, readonly) NSMutableDictionary *requestParameters BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换getFeedRequestParametersDic");
 @end
 

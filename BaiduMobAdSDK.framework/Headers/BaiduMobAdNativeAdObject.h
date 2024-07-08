@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdCommonConfig.h"
-#import "BaiduMobAdNativeReporter.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
+#import <BaiduMobAdSDK/BaiduMobAdNativeReporter.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol BaiduMobAdNativeInterationDelegate;
 
 @interface BaiduMobAdNativeAdObject : NSObject
@@ -173,3 +176,6 @@
 - (void)trackVideoEvent:(BaiduAdNativeVideoEvent)event withCurrentTime:(NSTimeInterval)currentPlaybackTime BaiduMobAdDEPRECATED_MSG("已废弃，请使用videoReport");
 
 @end
+
+
+NS_ASSUME_NONNULL_END

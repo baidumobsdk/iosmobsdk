@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Baidu Inc. All rights reserved.
 //
 
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 #import <Foundation/Foundation.h>
 
 @class BaiduMobAdSplash;
@@ -24,7 +24,7 @@
  *
  * @param errCode 错误码
  * @param message 错误信息
- * @param splash 开屏广告对象
+ * @param splashAd 开屏广告对象
  */
 - (void)splashAdLoadFailCode:(NSString *)errCode
                      message:(NSString *)message

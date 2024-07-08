@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 初始化摇一摇组件，组件高度需要大于80pt。
  * 摇一摇文案内容为：摇动手机  了解更多  如果组件宽度不够，则会自动将宽度适配文字长度。
- * @param fram 组件frame
+ * @param frame 组件frame
  * @param object BaiduMobAdNativeAdObject对象
  * @return 组件实例对象
  * 如果返回为nil，原因1：组件尺寸不合规；原因2：广告位不支持

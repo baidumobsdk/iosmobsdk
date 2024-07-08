@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Baidu. All rights reserved.
 //
 
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 #import <Foundation/Foundation.h>
 
 @class BaiduMobAdInterstitial;

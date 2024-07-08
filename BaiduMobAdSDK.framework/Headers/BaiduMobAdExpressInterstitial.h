@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BaiduMobAdExpressIntDelegate.h"
-#import "BaiduMobAdFeedRequestParameters.h"
+#import <BaiduMobAdSDK/BaiduMobAdExpressIntDelegate.h>
+#import <BaiduMobAdSDK/BaiduMobAdFeedRequestParameters.h>
 
 
 NS_ASSUME_NONNULL_BEGIN

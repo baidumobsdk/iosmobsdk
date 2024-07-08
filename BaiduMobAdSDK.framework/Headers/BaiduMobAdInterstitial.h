@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdInterstitialDelegate.h"
+#import <BaiduMobAdSDK/BaiduMobAdInterstitialDelegate.h>
 /*
  * 5 插屏广告：其他场景中使用 BaiduMobAdViewTypeInterstitialOther
  * 7 插屏广告：视频图片前贴片 BaiduMobAdViewTypeInterstitialBeforeVideo 有倒计时5s

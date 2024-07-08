@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 初始化滑一滑组件，
  * @param frame 组件frame
- * @param repeat:动画播放次数，-1为无限循环
+ * @param repeat 动画播放次数，-1为无限循环
  * @param animationWidth 动画区域的宽度,不包括文本，不得超过frame尺寸
  * @param animationHeight 动画区域的高度,不包括文本，不得超过frame尺寸
  * @param object BaiduMobAdNativeAdObject对象

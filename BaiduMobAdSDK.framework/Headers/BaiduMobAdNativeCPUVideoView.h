@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaiduMobAdNativeCPUDelegate.h"
+#import <BaiduMobAdSDK/BaiduMobAdNativeCPUDelegate.h>
 @class BaiduMobAdNativeCPUObject;
 
 

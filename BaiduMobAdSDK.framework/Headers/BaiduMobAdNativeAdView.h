@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaiduMobAdCommonConfig.h"
-@class BaiduMobAdNativeVideoBaseView;
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
+@class BaiduMobAdNativeVideoView;
 @class BaiduMobAdNativeAdObject;
 @class BaiduMobAdNativeWebView;
 @class BaiduMobAdActButton;
@@ -62,7 +62,7 @@
 /**
  * 视频 view
  */
-@property (strong, nonatomic) BaiduMobAdNativeVideoBaseView *videoView;
+@property (strong, nonatomic) BaiduMobAdNativeVideoView *videoView;
 
 /**
  * web view
@@ -123,7 +123,7 @@
               title:(UILabel *)titleLabel
                text:(UILabel *)textLabel
                icon:(UIImageView *)iconView
-          videoView:(BaiduMobAdNativeVideoBaseView *)videoView;
+          videoView:(BaiduMobAdNativeVideoView *)videoView;
 
 - (instancetype)initWithFrame:(CGRect)frame
           brandName:(UILabel *)brandLabel
@@ -131,7 +131,7 @@
                text:(UILabel *)textLabel
                icon:(UIImageView *)iconView
           mainImage:(UIImageView *)mainView
-          videoView:(BaiduMobAdNativeVideoBaseView *)videoView;
+          videoView:(BaiduMobAdNativeVideoView *)videoView;
 /**
  * 信息流模板
  */

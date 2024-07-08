@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdExpressFullScreenVideoDelegate.h"
-#import "BaiduMobAdFeedRequestParameters.h"
+#import <BaiduMobAdSDK/BaiduMobAdExpressFullScreenVideoDelegate.h>
+#import <BaiduMobAdSDK/BaiduMobAdFeedRequestParameters.h>
 
 
 @interface BaiduMobAdExpressFullScreenVideo : NSObject

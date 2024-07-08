@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdNativeCPUDelegate.h"
-#import "BaiduMobAdCPURequestParameters.h"
+#import <BaiduMobAdSDK/BaiduMobAdNativeCPUDelegate.h>
+#import <BaiduMobAdSDK/BaiduMobAdCPURequestParameters.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -6,7 +6,7 @@
 //
 //
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 
 @class BaiduMobAdNative;
 @class BaiduMobAdNativeAdView;

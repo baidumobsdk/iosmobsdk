@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 
 @class BaiduMobAdNativeAdObject;
+__attribute__((deprecated("该组件已不维护，后续该组件将下线，请接入优选模板")))
 @interface BaiduMobAdSmartFeedView : UIView
 
 /**
@@ -163,11 +164,5 @@
 @property (nonatomic, assign) CGFloat brandFontSize;
 @property (nonatomic, assign) UIFont *brandFont;
 @property (nonatomic, strong) UIColor *brandColor;
-
-#pragma mark - Deprecated
-
-@property (nonatomic, assign) int animationType BaiduMobAdDEPRECATED_MSG("已废弃");
-@property (nonatomic, assign) BOOL enableAnimation BaiduMobAdDEPRECATED_MSG("已废弃");
-@property (nonatomic, assign) CGFloat animationDuration BaiduMobAdDEPRECATED_MSG("已废弃");
 
 @end

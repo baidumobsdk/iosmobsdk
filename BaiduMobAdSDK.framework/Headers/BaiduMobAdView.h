@@ -7,7 +7,7 @@
 //
 //
 
-#import "BaiduMobAdDelegateProtocol.h"
+#import <BaiduMobAdSDK/BaiduMobAdDelegateProtocol.h>
 #import <UIKit/UIKit.h>
 
 /**

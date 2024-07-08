@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 
 @class BaiduMobAdBaseNativeAdView;
 @class BaiduMobAdNativeAdObject;
@@ -37,12 +37,12 @@
 
 /**
  * 广告请求成功
- * @param 请求成功的AdObject数组，如果只成功返回一条广告，数组大小为1
+ * @param adsArray 请求成功的AdObject数组，如果只成功返回一条广告，数组大小为1
  */
 - (void)onAdObjectsSuccessLoad:(NSArray*)adsArray;
 /**
  *  广告请求失败
- * @param 失败的类型 BaiduMobFailReason
+ * @param reason 失败的类型 BaiduMobFailReason
  */
 - (void)onAdsFailLoad:(BaiduMobFailReason) reason;
 

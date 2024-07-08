@@ -7,7 +7,7 @@
 //
 //
 
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 
 @class BaiduMobAdView;
 /**

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 
 //自定义视频播放器需要实现的接口
 @interface BaiduMobAdNativeVideoBaseView : UIView

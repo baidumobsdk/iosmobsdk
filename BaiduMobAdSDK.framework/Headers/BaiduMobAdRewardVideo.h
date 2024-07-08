@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdRewardVideoDelegate.h"
-#import "BaiduMobAdFeedRequestParameters.h"
+#import <BaiduMobAdSDK/BaiduMobAdRewardVideoDelegate.h>
+#import <BaiduMobAdSDK/BaiduMobAdFeedRequestParameters.h>
 
 
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 #import <AVFoundation/AVFoundation.h>
 
 @class BaiduMobAdVideoView;
@@ -148,9 +148,5 @@
  */
 - (void)handleClick;
 
-/**
- 视频曝光事件 已废弃，无需开发者发送
- */
-- (void)trackImpression BaiduMobAdDEPRECATED_MSG("已废弃，无需开发者发送");
 
 @end

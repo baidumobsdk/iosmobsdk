@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 视频播放器终止/暂停播放打点
  * @param startPlayTime 视频开始播放的刻度，单位为s
- * @param currentPlayBackTime 视频当前播放进度，单位为s
+ * @param currentPlaybackTime 视频当前播放进度，单位为s
  * @param reason 终止/暂停原因，原因如下，传入值为原因对应的数字字符串
  *      1：点击广告跳转落地页
         2：离开APP：用户进后台行为
@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 视频播放器重新播放打点
  * @param startPlayTime 视频开始播放的刻度，单位为s
- * @param currentPlayBackTime 视频当前播放进度，单位为s
+ * @param currentPlaybackTime 视频当前播放进度，单位为s
  */
 - (void)replayVideoStartPlayTime:(NSTimeInterval)startPlayTime
                  withCurrentTime:(NSTimeInterval)currentPlaybackTime;

@@ -6,12 +6,11 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import "BaiduMobAdCommonConfig.h"
-#import "BaiduMobAdNativeVideoBaseView.h"
-#import "BaiduMobAdNativeVideoViewDelegate.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
+#import <BaiduMobAdSDK/BaiduMobAdNativeVideoViewDelegate.h>
 
 @class BaiduMobAdNativeAdObject;
-@interface BaiduMobAdNativeVideoView : BaiduMobAdNativeVideoBaseView
+@interface BaiduMobAdNativeVideoView : UIView
 @property BOOL supportControllerView;
 @property BOOL supportActImage;
 

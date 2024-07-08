@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BaiduMobAdCommonConfig.h"
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 @class BaiduMobAdNativeCPU;
 @class BaiduMobAdNativeCPUObject;
 @class BaiduMobAdNativeCPUVideoView;
@@ -19,7 +19,7 @@
 
 /**
  * CPU请求成功
- * @param 请求成功的BaiduMobAdNativeCPUObject数组，如果只成功返回一条广告，数组大小为1
+ * @param cpusArray 请求成功的BaiduMobAdNativeCPUObject数组，如果只成功返回一条广告，数组大小为1
  */
 - (void)nativeCPUSuccessLoad:(NSArray *)cpusArray
                    NativeCPU:(BaiduMobAdNativeCPU *)nativeCPU;
@@ -50,7 +50,7 @@
 
 /**
  * 内容详情页加载完成
- * @param UIViewController 详情页视图
+ * @param viewController 详情页视图
  */
 - (void)didFinishLandingPage:(UIViewController *)viewController
                       object:(BaiduMobAdNativeCPUObject *)object;

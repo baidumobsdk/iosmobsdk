@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaiduMobAdNativeAdDelegate.h"
-#import "BaiduMobAdFeedRequestParameters.h"
-#import "BaiduMobAdNativeInterationDelegate.h"
+#import <BaiduMobAdSDK/BaiduMobAdNativeAdDelegate.h>
+#import <BaiduMobAdSDK/BaiduMobAdFeedRequestParameters.h>
+#import <BaiduMobAdSDK/BaiduMobAdNativeInterationDelegate.h>
 
 @class BaiduMobAdNativeAdView;
 
@@ -109,11 +109,5 @@
 #pragma mark - DEPRECATED_ATTRIBUTE
 
 - (void)setBiddingData:(NSString *)data BaiduMobAdDEPRECATED_MSG("已废弃，请接入最新的服务端bidding渲染方式");
-
-@property (nonatomic, copy) NSString *adId BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换AdUnitTag使用方式");
-
-- (void)requestNativeAdsWithParameters:(BaiduMobAdFeedRequestParameters *)requestParameters BaiduMobAdDEPRECATED_MSG("已废弃，请及时参考Demo修改使用方式");
-
-- (void)requestExpressNativeAds BaiduMobAdDEPRECATED_MSG("已废弃，请及时替换isExpressNativeAds使用方式");
 
 @end

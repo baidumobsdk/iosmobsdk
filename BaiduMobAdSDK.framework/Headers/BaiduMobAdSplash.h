@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BaiduMobAdSplashDelegate.h"
-#import "BaiduMobAdFeedRequestParameters.h"
+#import <BaiduMobAdSDK/BaiduMobAdSplashDelegate.h>
+#import <BaiduMobAdSDK/BaiduMobAdFeedRequestParameters.h>
 @interface BaiduMobAdSplash : NSObject
 
 /**
