@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.name         = 'BaiduMobAdSDK'
   s.version      = '5.361'
   s.summary      = "mobile ad sdk for ios"
-  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "5.360" }
+  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "5.361" }
 
 
   # This description is used to generate tags and improve search results.
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios,'8.0'
+  s.platform     = :ios,'9.0'
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
