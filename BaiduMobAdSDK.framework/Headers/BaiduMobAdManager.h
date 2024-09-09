@@ -11,6 +11,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaiduMobAdManager : NSObject
 
++ (BaiduMobAdManager *)sharedInstance;
+
+- (void)setCustomValue:(id)value forKey:(NSString *)key;
+
+- (void)startSDK;
+
+- (BOOL)isSDKReady;
+
+- (void)readToolsAdConfig;
+
 + (void)setAppsid:(NSString *)appsid;
 
 /// 初始化SDK

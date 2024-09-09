@@ -34,10 +34,6 @@
      withAdInstance:(BaiduMobAdInstance *)adInstance
      withDictionary:(NSDictionary *)dict;
 
-- (void)onAdSwitch:(BaiduMobAdRenderer *)render
-    withAdInstance:(BaiduMobAdInstance *)adInstance
-    withDictionary:(NSDictionary *)dict;
-
 - (void)onAdStart:(BaiduMobAdRenderer *)render
    withAdInstance:(BaiduMobAdInstance *)adInstance
    withDictionary:(NSDictionary *)dict;
@@ -49,19 +45,6 @@
 - (void)onAdSkip:(BaiduMobAdRenderer *)render
   withAdInstance:(BaiduMobAdInstance *)adInstance
   withDictionary:(NSDictionary *)dict;
-
-- (void)onInterstitialAdLoaded:(BaiduMobAdRenderer *)render
-                withAdInstance:(BaiduMobAdInstance *)adInstance
-                withDictionary:(NSDictionary *)dict;
-
-- (void)onInterstitialAdFailtoLoadAd:(BaiduMobAdRenderer *)render
-                      withAdInstance:(BaiduMobAdInstance *)adInstance
-                              reason:(BaiduMobFailReason)reason
-                      withDictionary:(NSDictionary *)dict;
-
-- (void)onInterstitialAdDismissScreen:(BaiduMobAdRenderer *)render
-                       withAdInstance:(BaiduMobAdInstance *)adInstance
-                       withDictionary:(NSDictionary *)dict;
 
 - (void)onSplashVideoReadyPlay:(BaiduMobAdRenderer *)render
                        withDictionary:(NSDictionary *)dict;

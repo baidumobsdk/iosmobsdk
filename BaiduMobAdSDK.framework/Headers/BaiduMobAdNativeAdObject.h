@@ -89,7 +89,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  价格标签
  */
-@property (copy, nonatomic) NSString *ECPMLevel;
+@property (copy, nonatomic, readonly) NSString *ECPMLevel;
+
 /**
  用户点击行为
  */
@@ -125,6 +126,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  广告价格标签
  */
 - (NSString *)getECPMLevel;
+
+- (NSString *)getPECPM;
 
 /**
  * 竞价成功，上报竞价失败排名第二的信息

@@ -81,6 +81,8 @@ typedef enum {
  */
 - (NSString *)getECPMLevel;
 
+- (NSString *)getPECPM;
+
 /**
  * 竞价成功，上报竞价失败排名第二的信息
  * @param secondInfo 竞败方，排名第二的信息

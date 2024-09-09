@@ -62,6 +62,12 @@
 @property (nonatomic, assign) int bidFloor;
 
 /**
+ * 广告请求超时时间，默认30s，单位s
+ */
+@property (nonatomic, assign) NSTimeInterval timeout;
+
+
+/**
  *  预加载视频广告，并缓存物料信息到本地。
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */
@@ -89,6 +95,8 @@
  *  广告价格标签
  */
 - (NSString *)getECPMLevel;
+
+- (NSString *)getPECPM;
 
 /**
  * 竞价成功，上报竞价失败排名第二的信息

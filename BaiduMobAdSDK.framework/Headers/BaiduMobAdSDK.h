@@ -55,3 +55,4 @@ FOUNDATION_EXPORT const unsigned char BaiduMobAdSDKVersionString[];
 #import <BaiduMobAdSDK/BaiduMobCpuInfoManager.h>
 #import <BaiduMobAdSDK/BaiduMobAdNativeWebView.h>
 #import <BaiduMobAdSDK/BaiduMobAdManager.h>
+#import <BaiduMobAdSDK/BaiduMobAdDynamicBarrageManager.h>
