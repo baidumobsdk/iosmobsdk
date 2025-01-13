@@ -7,7 +7,7 @@
 #import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 
 @interface BaiduMobAdSetting : NSObject
-@property (nonatomic, assign) BOOL supportHttps;
+
 @property (nonatomic, assign) BOOL trackCrash;
 
 + (BaiduMobAdSetting *)sharedInstance;
@@ -79,6 +79,16 @@
  * 获取SDK Version
  */
 - (NSString *)getSDKVersion;
+
+#pragma mark - 测试工具SDK使用
+
+- (void)setCustomValue:(id)value forKey:(NSString *)key;
+
+- (void)startSDK;
+
+- (BOOL)isSDKReady;
+
+- (void)readToolsAdConfig;
 
 @end
 

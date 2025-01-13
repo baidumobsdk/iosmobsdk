@@ -59,10 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)load;
 
 /**
- *  返回广告状态
- *  YES代表可用(广告未过期，且缓存成功)，NO代表不可用
+ *  展示插屏广告，默认使用RootViewController present
  */
-- (BOOL)isReady;
+- (void)show;
 
 /**
  *  展示插屏使用的controller present
@@ -70,11 +69,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showFromViewController:(UIViewController *)controller;
 
 /**
+ *  返回广告状态
+ *  YES代表可用(广告未过期，且缓存成功)，NO代表不可用
+ */
+- (BOOL)isReady;
+
+/**
  *  广告价格标签
  */
 - (NSString *)getECPMLevel;
 
-- (NSString *)getPECPM;
 
 /**
  * 竞价成功，上报竞价失败排名第二的信息
@@ -94,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)biddingFailWithWinInfo:(NSDictionary *)winInfo completion:(void (^)(BOOL success, NSString *errorInfo))completion;
 
-
+- (NSString *)getPECPM;
 
 /**
  * 获取Bidding token

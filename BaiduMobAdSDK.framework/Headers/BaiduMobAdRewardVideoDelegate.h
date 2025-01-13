@@ -18,12 +18,12 @@
 
 #pragma mark - 广告请求delegate
 /**
- * 激励视频广告请求成功
+ * 广告请求成功
  */
 - (void)rewardedAdLoadSuccess:(BaiduMobAdRewardVideo *)video;
 
 /**
- * 激励视频广告请求失败
+ * 广告请求失败
  */
 - (void)rewardedAdLoadFailCode:(NSString *)errCode
                        message:(NSString *)message
@@ -65,7 +65,7 @@
 - (void)rewardedVideoAdDidPlayFinish:(BaiduMobAdRewardVideo *)video;
 
 /**
- * 成功激励回调
+ * 成功激励
  * 低于30s的视频播放达到90%即会回调
  * 高于30s的视频播放达到27s即会回调
  * @param verify 激励验证，YES为成功
@@ -73,12 +73,11 @@
 - (void)rewardedVideoAdRewardDidSuccess:(BaiduMobAdRewardVideo *)video verify:(BOOL)verify;
 
 /**
- *  用户点击视频跳过按钮，进入尾帧
+ *  用户点击跳过
  @param progress 当前播放进度 单位百分比 （注意浮点数）
  */
 - (void)rewardedVideoAdDidSkip:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
 
-#warning 5.33版本回调时机变更：原rewardedVideoAdDidClose关闭回调拆分为DidClose和WillClose两个回调。新增willClose接口回调时机等同于原DidClose回调时机，新DidClose将在页面完全关闭后回调。
 /**
  *  用户点击关闭，激励视频视图关闭
  @param progress 当前播放进度 单位百分比 （注意浮点数）
@@ -93,7 +92,7 @@
 - (void)rewardedVideoAdWillClose:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
 
 /**
- *  用户点击下载/查看详情
+ *  用户点击广告
  @param progress 当前播放进度 单位百分比
  */
 - (void)rewardedVideoAdDidClick:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;

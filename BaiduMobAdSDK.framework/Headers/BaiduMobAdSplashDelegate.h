@@ -14,10 +14,6 @@
 @protocol BaiduMobAdSplashDelegate <NSObject>
 
 @required
-/**
- *  应用的APPID
- */
-- (NSString *)publisherId;
 
 /**
  * 开屏广告请求失败
@@ -102,6 +98,14 @@
  * 开屏广告缓存失败
  */
 - (void)splashAdCacheFail:(BaiduMobAdSplash *)splash;
+
+
+#pragma mark - DEPRECATED_ATTRIBUTE
+
+/**
+ *  应用的APPID
+ */
+- (NSString *)publisherId BaiduMobAdDEPRECATED_MSG("已废弃，请使用publisherId属性直接接入");
 
 @end
 

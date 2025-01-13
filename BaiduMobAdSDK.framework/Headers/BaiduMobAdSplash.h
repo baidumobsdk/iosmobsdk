@@ -40,9 +40,14 @@
 @property (nonatomic, assign, readonly) BOOL hasZoomOutView;
 
 /**
+ *  应用的APPID
+ */
+@property(nonatomic, copy) NSString *publisherId;
+
+/**
  *  设置/获取代码位id
  */
-@property (nonatomic, copy) NSString *AdUnitTag;
+@property (nonatomic, copy) NSString *adUnitTag;
 
 /**
  *  设置开屏广告是否可以点击的属性,开屏默认可以点击。
@@ -73,12 +78,15 @@
  * 设置摇一摇的尺寸高或宽，摇一摇默认69pt
  */
 @property (nonatomic, assign) CGFloat shakeImageViewSize;
+
 /**
  * 设置扭一扭图片的尺寸高，默认63pt
  */
 @property (nonatomic, assign) CGFloat twistImageViewSize;
 
-//扭一扭蒙层颜色
+/**
+ * 扭一扭蒙层颜色
+ */
 @property (nonatomic, strong) UIColor *twistMaskColor;
 
 /**
@@ -87,25 +95,37 @@
  */
 @property (nonatomic, assign) int bidFloor;
 
-
-
-
-
-
 /**
  * 开屏传参
  */
 @property (nonatomic, strong) BaiduMobAdFeedRequestParameters *requestParameters;
 
 /**
- *  请求并展示开屏广告，广告尺寸以传入window大小为准
- */
-- (void)loadAndDisplayUsingKeyWindow:(UIWindow *)keyWindow;
-
-/**
  *  请求并展示半屏开屏广告，广告尺寸以传入view大小为准
  */
 - (void)loadAndDisplayUsingContainerView:(UIView *)view;
+
+/**
+ * 请求开屏广告，仅请求不做展示，需要手动调用show展示广告
+ * load之前请先设置开屏渲染视图大小：adSize
+ */
+- (void)load;
+
+/**
+ * 展示广告
+*/
+- (void)showInContainerView:(UIView *)view;
+
+/**
+ * 销毁开屏，释放资源
+ */
+- (void)stop;
+
+/**
+ * 广告是否可用
+ * 缓存成功&广告未过期
+ */
+- (BOOL)isReady;
 
 /**
  * 展示开屏点睛-卡片样式
@@ -122,23 +142,6 @@
  * @param viewController 用于展示卡片的VC
  */
 - (void)showZoomOutViewInViewController:(UIViewController *)viewController;
-
-/**
- * 展示广告
- * @param viewController 展示广告所在的VC
-*/
-- (void)showSplashViewInViewController:(UIViewController *)viewController;
-
-/**
- * 请求开屏广告，仅请求不做展示，需要手动调用show展示广告
- * load之前请先设置开屏渲染视图大小：adSize
- */
-- (void)load;
-
-/**
- * 展示广告
-*/
-- (void)showInContainerView:(UIView *)view;
 
 /**
  * 重置广告容器大小
@@ -188,12 +191,6 @@
 - (void)loadBiddingAd:(NSString *)bidId;
 
 /**
- * 销毁开屏，释放资源
- */
-- (void)stop;
-
-
-/**
  * 根据key获取广告相关字段
  * @param key 需要获取的key字段
  * @return 字段的字符串
@@ -204,5 +201,8 @@
 
 - (void)setBiddingData:(NSString *)data BaiduMobAdDEPRECATED_MSG("已废弃，请接入最新的服务端bidding渲染方式");
 
+- (void)loadAndDisplayUsingKeyWindow:(UIWindow *)keyWindow BaiduMobAdDEPRECATED_MSG("已废弃，请使用view接入");
+
+- (void)showSplashViewInViewController:(UIViewController *)viewController BaiduMobAdDEPRECATED_MSG("已废弃，请使用view接入");
 
 @end

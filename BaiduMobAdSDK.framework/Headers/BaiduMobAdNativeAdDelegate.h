@@ -34,15 +34,6 @@
                      adObject:(BaiduMobAdNativeAdObject *)adObject;
 
 @optional
-/**
- *  应用在mssp.baidu.com上的APPID
- */
-- (NSString *)publisherId;
-
-/**
- * 广告位id
- */
-- (NSString *)apId;
 
 /**
  * 模版高度，仅用于信息流模版广告
@@ -64,6 +55,17 @@
  */
 - (BOOL)enableLocation;//如果enable，plist 需要增加NSLocationWhenInUseUsageDescription
 
+#pragma mark - 已过期方法
+
+/**
+ *  应用在mssp.baidu.com上的APPID
+ */
+- (NSString *)publisherId BaiduMobAdDEPRECATED_MSG("已废弃，请使用BaiduMobAdNative.publisherId传入");
+
+/**
+ * 广告位id
+ */
+- (NSString *)apId BaiduMobAdDEPRECATED_MSG("已废弃，请使用BaiduMobAdNative.adUnitTag传入");
 
 /**
  *  广告请求失败

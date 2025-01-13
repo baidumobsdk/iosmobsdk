@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * 初始化接口，容器宽度需要大于屏幕宽的1/2，否则不渲染，容器强制宽高比为9:16。
+ * 注意：三图类素材不支持渲染为书签样式
  */
 - (instancetype)initWithFrame:(CGRect)frame withAdObject:(BaiduMobAdNativeAdObject *)adObject;
 

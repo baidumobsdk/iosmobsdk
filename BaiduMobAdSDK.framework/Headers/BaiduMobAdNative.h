@@ -25,7 +25,6 @@
  */
 @property (nonatomic, copy) NSString *adUnitTag;
 
-#warning 注意！！接入变更：信息流广告原有delegate已经废弃，广告请求和行为delegate拆分为两个adDelegate和InterationDelegate
 /**
  * 广告请求 delegate
  */
@@ -87,7 +86,8 @@
  *  请求信息流广告
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */
-- (void)requestNativeAds;
+- (void)load;
+
 
 /**
  *  预加载视频素材  如果有多条素材会在所以素材均缓存完毕后回调nativeVideoAdCacheSuccess
@@ -109,5 +109,8 @@
 #pragma mark - DEPRECATED_ATTRIBUTE
 
 - (void)setBiddingData:(NSString *)data BaiduMobAdDEPRECATED_MSG("已废弃，请接入最新的服务端bidding渲染方式");
+
+/// 5.38版本开始不建议调用，预计5.45版本后将删除该接口
+- (void)requestNativeAds BaiduMobAdDEPRECATED_MSG("已废弃，请使用最新的load方法请求广告");
 
 @end

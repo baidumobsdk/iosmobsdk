@@ -33,7 +33,7 @@
 /**
  *  设置/获取代码位(广告位)id
  */
-@property (nonatomic, copy) NSString *AdUnitTag;
+@property (nonatomic, copy) NSString *adUnitTag;
 
 /**
  *  启动位置信息 如果enable，plist 需要增加NSLocationWhenInUseUsageDescription
