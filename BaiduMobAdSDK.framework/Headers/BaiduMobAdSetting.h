@@ -31,18 +31,6 @@
 - (void)setDebugLogEnable:(BOOL)debugLogEnable;
 
 /**
- 打开或关闭百度CAID的开关
-
- @param enable YES开启  默认YES
- */
-- (void)setBDPermissionEnable:(BOOL)enable BaiduMobAdDEPRECATED_MSG("已废弃，需要调整功能请联系商务/运营同学");
-
-/**
- * 获取CAID开关状态，默认开启。
- */
-- (BOOL)getBDPermission BaiduMobAdDEPRECATED_MSG("已废弃，需要调整功能请联系商务/运营同学");
-
-/**
  * 限制个性化广告
  * @param limit YES限制，默认NO
  */
@@ -89,6 +77,12 @@
 - (BOOL)isSDKReady;
 
 - (void)readToolsAdConfig;
+
+#pragma mark - 废弃接口
+
+- (void)setBDPermissionEnable:(BOOL)enable BaiduMobAdDEPRECATED_MSG("已废弃，需要调整功能请联系商务/运营同学");
+
+- (BOOL)getBDPermission BaiduMobAdDEPRECATED_MSG("已废弃，需要调整功能请联系商务/运营同学");
 
 @end
 
