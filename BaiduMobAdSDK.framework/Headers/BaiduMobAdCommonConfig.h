@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"5.40"
+#define SDK_VERSION_IN_MSSP @"10.01"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -155,7 +155,7 @@ typedef NS_ENUM(NSInteger, BaiduMobAdDislikeReasonType) {
 #define CPU_CHANNEL_CAR             @"1007" //汽车
 #define CPU_CHANNEL_HOUSE           @"1008" //房产
 #define CPU_CHANNEL_FASHION         @"1009" //时尚
-#define CPU_CHANNEL_SHOPPING        @"1010" //购物
+#define CPU_CHANNEL_SHOPPING        @"10.01" //购物
 #define CPU_CHANNEL_MILITARY        @"1012" //军事
 #define CPU_CHANNEL_TECH            @"1013" //科技
 #define CPU_CHANNEL_HEALTH          @"1014" //健康
