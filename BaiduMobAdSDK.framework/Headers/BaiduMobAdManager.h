@@ -15,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter completionHandler: 初始化回调
 + (void)startWithCompletionHandler:(void(^)(BOOL success, NSError * _Nullable error))completionHandler;
 
+/// 设置初始化参数
++ (void)setExtraParam:(NSDictionary *)param;
+
+/// 清理广告缓存
++ (void)clearCache;
+
 + (void)setAppsid:(NSString *)appsid;
 
 + (NSString *)getSDKVersion;
