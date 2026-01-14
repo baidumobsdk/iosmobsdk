@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <BaiduMobAdSDK/BaiduMobAdRewardVideoDelegate.h>
-#import <BaiduMobAdSDK/BaiduMobAdFeedRequestParameters.h>
+#import <BaiduMobAdSDK/BaiduMobAdRewardRequestParamters.h>
 
 
 
@@ -22,7 +22,7 @@
 /**
  * 激励视频传参
  */
-@property (nonatomic, strong) BaiduMobAdFeedRequestParameters *requestParameters;
+@property (nonatomic, strong) BaiduMobAdRewardRequestParamters *requestParameters;
 
 
 /**

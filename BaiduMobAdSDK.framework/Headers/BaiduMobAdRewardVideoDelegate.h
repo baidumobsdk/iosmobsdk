@@ -69,8 +69,10 @@
  * 低于30s的视频播放达到90%即会回调
  * 高于30s的视频播放达到27s即会回调
  * @param verify 激励验证，YES为成功
+ * @param rewardInfo
+ *        key: reward_type 奖励类型  value: 0: 普通奖励，1:膨胀奖励、2: 翻倍奖励
  */
-- (void)rewardedVideoAdRewardDidSuccess:(BaiduMobAdRewardVideo *)video verify:(BOOL)verify;
+- (void)rewardedVideoAdRewardDidSuccess:(BaiduMobAdRewardVideo *)video verify:(BOOL)verify rewardInfo:(NSDictionary *)rewardInfo;
 
 /**
  *  用户点击跳过
@@ -97,6 +99,8 @@
  */
 - (void)rewardedVideoAdDidClick:(BaiduMobAdRewardVideo *)video withPlayingProgress:(CGFloat)progress;
 
+#pragma mark - DEPRECATED_ATTRIBUTE
+- (void)rewardedVideoAdRewardDidSuccess:(BaiduMobAdRewardVideo *)video verify:(BOOL)verify; BaiduMobAdDEPRECATED_MSG("已废弃，请接入最新的奖励回调");
 
 @end
 

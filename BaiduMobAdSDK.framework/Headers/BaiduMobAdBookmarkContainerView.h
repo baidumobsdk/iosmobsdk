@@ -12,6 +12,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, BaiduMobAdNativeBookmarkEntryAnimationStyle) {
+    BaiduMobAdNativeBookmarkEntryAnimationStyleDefault = 0,        // 默认样式
+    BaiduMobAdNativeBookmarkEntryAnimationStyleFadeIn,         // 淡入 (旧书签样式支持)
+    BaiduMobAdNativeBookmarkEntryAnimationStyleSlideFromRight, // 从右滑入 (10.03版本后新书签样式支持)
+    BaiduMobAdNativeBookmarkEntryAnimationStyleSlideFromTop   // 从上滑入 (10.03版本后新书签样式支持)
+};
+
+typedef NS_ENUM(NSInteger, BaiduMobAdNativeBookmarkCardColor) {
+    BaiduMobAdNativeBookmarkCardColorBrown,   // 棕色，默认
+    BaiduMobAdNativeBookmarkCardColorPink,    // 粉色
+    BaiduMobAdNativeBookmarkCardColorGreen,   // 绿色
+    BaiduMobAdNativeBookmarkCardColorBlue,    // 蓝色
+    BaiduMobAdNativeBookmarkCardColorDark     // 深色
+};
+
 @interface BaiduMobAdBookmarkContainerView : UIView
 
 /**
@@ -34,9 +49,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * 设置书签底卡颜色，仅render前配置生效
+ * 注意：仅支持10.03版本之前的书签样式
  * 默认值：#C2C5CC
  */
 - (void)setBookmarkBottomCardColor:(NSString *)color;
+
+/**
+ * 修改书签新样式的底卡书签色和按钮色，书签色和按钮色是映射关系，仅需配置书签色即可
+ * 注意：10.03版本以后 仅在开启新书签样式后生效
+ * 可实时生效，无需重新渲染，也可渲染前调用
+ */
+- (void)setBookmarkStyleColorWithColor:(BaiduMobAdNativeBookmarkCardColor)color;
 
 /**
  * 广告logo显隐控制。仅render前配置生效。
@@ -70,13 +93,23 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 添加动效。组件曝光通过BaiduMobAdNativeAdObject的曝光接口上报。
  * 该接口是启动书签模板的动效，可在曝光成功时候调用
+ * 新接口，可传入入场动画样式
  */
-- (void)showBookmarkAnimation;
+- (void)showBookmarkAnimationWithStyle:(BaiduMobAdNativeBookmarkEntryAnimationStyle)style;
 
 /**
  * 销毁组件
  */
 - (void)destoryBookmarkView;
+
+
+#pragma mark - DEPRECATED_ATTRIBUTE
+
+/**
+ * 添加动效。组件曝光通过BaiduMobAdNativeAdObject的曝光接口上报。
+ * 该接口是启动书签模板的动效，可在曝光成功时候调用
+ */
+- (void)showBookmarkAnimation; BaiduMobAdDEPRECATED_MSG("10.03版本建议接入新接口，支持更丰富的动画能力");
 
 
 @end
