@@ -80,6 +80,23 @@
 - (BOOL)isReady;
 
 /**
+ * 设置二段奖励信息
+ * 注：需要在show之前调用，普通奖励该接口不生效
+ * @param rewardType 奖励类型，0: 普通奖励(可不配置)，1:膨胀奖励、2: 翻倍奖励
+ * @param basicReward 基础奖励数值(例如：10)，最多支持展示 5 位
+ * @param basicUnit 基础奖励单位(例如：元)，最多支持展示 3 位
+ * @param advancedReward 膨胀/翻倍奖励数值(例如: 40)，最多支持展示 5 位
+ * @param advancedUnit 膨胀/翻倍奖励单位(例如：元)，最多支持展示 3 位
+ * @param multiple 翻倍奖励的倍数(仅需传入数字)，例如2倍传入 @"2"
+ */
+- (void)setTwoStageRewardInfoWithRewardType:(NSString *)rewardType
+                                basicReward:(NSString *)basicReward
+                                  basicUnit:(NSString *)basicUnit
+                             advancedReward:(NSString *)advancedReward
+                               advancedUnit:(NSString *)advancedUnit
+                                   multiple:(NSString *)multiple;
+
+/**
  *  展示激励视频，默认RootViewController present
  *  默认使用本地缓存，本地缓存失效则在线请求播放
  */
