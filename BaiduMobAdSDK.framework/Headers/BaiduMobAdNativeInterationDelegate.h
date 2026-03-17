@@ -43,6 +43,27 @@
 - (void)didDismissLandingPage:(UIView *)nativeAdView;
 
 /**
+ * 行为激励奖励完成回调
+ * 当用户完成行为激励条件（如浏览落地页达到指定时长）时触发
+ * @param nativeAdView 当前的广告视图
+ * @param object 广告数据对象
+ */
+- (void)nativeAdBehaviorIncentiveRewardDidComplete:(UIView *)nativeAdView nativeAdObject:(BaiduMobAdNativeAdObject *)object;
+
+/**
+ * 行为激励计时更新回调
+ * 用于媒体实时获取行为激励的剩余时间和累计时间
+ * @param nativeAdView 当前的广告视图
+ * @param object 广告数据对象
+ * @param remainingTime 剩余时长（秒）
+ * @param accumulatedTime 累计时长（秒）
+ */
+- (void)nativeAdBehaviorIncentiveTimerDidUpdate:(UIView *)nativeAdView
+                             nativeAdDataObject:(BaiduMobAdNativeAdObject *)object
+                                  remainingTime:(NSTimeInterval)remainingTime
+                                accumulatedTime:(NSTimeInterval)accumulatedTime;
+
+/**
  *  联盟官网点击跳转
  */
 - (void)unionAdClicked:(UIView *)nativeAdView nativeAdDataObject:(BaiduMobAdNativeAdObject *)object;

@@ -96,6 +96,22 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (copy, nonatomic) NSString *actButtonString;
 
+/**
+ 广告支持行为激励能力
+ */
+@property (nonatomic, assign) BOOL isSupportActReward;
+
+/**
+ 行为激励 激励文案
+ 注意：如果广告未下发，则为空
+ */
+@property (nonatomic, strong) NSString *actText;
+
+/**
+ 行为激励 操作总时长
+ */
+@property (nonatomic, strong) NSString *actTime;
+
 // 发送视频广告相关日志
 @property (nonatomic, strong, readonly) BaiduMobAdNativeReporter *videoReport;
 
@@ -166,6 +182,11 @@ NS_ASSUME_NONNULL_BEGIN
  * 百度联盟官网logo点击
  */
 - (void)baiduLogoClick:(UIView *)baiduLogoView;
+
+/**
+ 行为激励 获取剩余的操作时长
+ */
+- (int)getActReawrdRemainTime;
 
 /**
  * 根据key获取广告相关字段

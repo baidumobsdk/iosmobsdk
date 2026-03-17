@@ -83,6 +83,12 @@
 @property (nonatomic, assign) BOOL isExpressNativeAds;
 
 /**
+ * 是否支持自渲染行为激励广告，默认不支持
+ * 注意：若开启优选模板广告请求，则此接口不生效
+ */
+@property (nonatomic, assign) BOOL isSupportRewardAds;
+
+/**
  *  请求信息流广告
  *  注意广告的展示存在有效期，单次检索后须在一定时间内展示在页面上
  */
