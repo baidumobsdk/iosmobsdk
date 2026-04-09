@@ -32,6 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// delegate
 @property (nonatomic, weak) id <BaiduMobAdNativeCouponSuspensionViewDelegate> delegate;
 
+/**
+ * 初始化组件 (返回的组件大小是根据传入的宽高值和组件实际的宽高比动态计算)
+ * @param frame 组件frame
+ * @param adObject BaiduMobAdNativeAdObject对象
+ * @return 组件实例对象
+ */
+- (instancetype)initWithFrame:(CGRect)frame withObject:(BaiduMobAdNativeAdObject *)adObject;
+
 /// 获取当前广告的组件样式
 - (BaiduMobAdNativeCouponSuspensionType)getNativeCouponSuspensionViewType;
 
