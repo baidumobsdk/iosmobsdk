@@ -9,7 +9,7 @@
 #ifndef BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 #define BaiduMobAdSdk_BaiduMobAdCommonConfig_h
 // SDK版本号
-#define SDK_VERSION_IN_MSSP @"10.051"
+#define SDK_VERSION_IN_MSSP @"10.06"
 
 typedef void (^BaiduMobAdViewCompletionBlock)(NSArray *errors);
 
@@ -141,33 +141,6 @@ typedef NS_ENUM(NSInteger, BaiduMobAdDislikeReasonType) {
     BaiduMobAdDislikeReasonInducedClick, // 诱导点击
     BaiduMobAdDislikeReasonSuspectedPlagiarism // 疑似抄袭
 };
-
-/**
- *  内容联盟频道id列表
- *  仅适用于频道样式
- *  block样式需要开发者自己在mssp申请id
- */
-#define CPU_CHANNEL_ENTERTAINMENT   @"1001" //娱乐
-#define CPU_CHANNEL_SPORTS          @"1002" //体育
-#define CPU_CHANNEL_PICTURE         @"1003" //图片
-#define CPU_CHANNEL_MOBILE          @"1005" //手机
-#define CPU_CHANNEL_FINANCE         @"1006" //财经
-#define CPU_CHANNEL_CAR             @"1007" //汽车
-#define CPU_CHANNEL_HOUSE           @"1008" //房产
-#define CPU_CHANNEL_FASHION         @"1009" //时尚
-#define CPU_CHANNEL_SHOPPING        @"1010" //购物
-#define CPU_CHANNEL_MILITARY        @"1012" //军事
-#define CPU_CHANNEL_TECH            @"1013" //科技
-#define CPU_CHANNEL_HEALTH          @"1014" //健康
-#define CPU_CHANNEL_HOTSPOT         @"1021" //热点
-#define CPU_CHANNEL_RECOMMEND       @"1022" //推荐
-#define CPU_CHANNEL_BEAUTY          @"1024" //美女
-#define CPU_CHANNEL_AMUSE           @"1025" //搞笑
-#define CPU_CHANNEL_AGG             @"1032" //聚合
-#define CPU_CHANNEL_VIDEO           @"1033" //视频
-#define CPU_CHANNEL_WOMEN           @"1034" //女人
-#define CPU_CHANNEL_LIFE            @"1035" //生活
-#define CPU_CHANNEL_CULTURE         @"1036" //文化
 
 #endif
 

@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   #
 
   s.name         = 'BaiduMobAdSDK'
-  s.version      = '10.051'
+  s.version      = '10.060'
   s.summary      = "mobile ad sdk for ios"
-  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "10.051" }
+  s.source       = { :git => "https://github.com/baidumobsdk/iosmobsdk.git", :tag => "10.060" }
 
 
   # This description is used to generate tags and improve search results.

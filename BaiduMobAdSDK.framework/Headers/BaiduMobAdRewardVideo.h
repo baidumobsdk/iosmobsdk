@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <BaiduMobAdSDK/BaiduMobAdRewardVideoDelegate.h>
 #import <BaiduMobAdSDK/BaiduMobAdRewardRequestParamters.h>
-
+#import <BaiduMobAdSDK/BaiduMobAdRewardVideoModel.h>
 
 
 @interface BaiduMobAdRewardVideo : NSObject
@@ -24,6 +24,10 @@
  */
 @property (nonatomic, strong) BaiduMobAdRewardRequestParamters *requestParameters;
 
+/**
+ * 激励视频 样式参数model
+ */
+@property (nonatomic, strong) BaiduMobAdRewardVideoModel *rewardStyleModel;
 
 /**
  *  应用的APPID
@@ -114,6 +118,16 @@
 - (NSString *)getECPMLevel;
 
 - (NSString *)getPECPM;
+
+/**
+ *  获取订单激励奖励值
+ */
+- (NSString *)getRewardValue;
+
+/**
+ *  获取订单激励奖励单位
+ */
+- (NSString *)getRewardUnit;
 
 /**
  * 竞价成功，上报竞价失败排名第二的信息

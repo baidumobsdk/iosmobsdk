@@ -18,7 +18,6 @@ FOUNDATION_EXPORT const unsigned char BaiduMobAdSDKVersionString[];
 #import <BaiduMobAdSDK/IBaiduMobAdRenderEventDelegate.h>
 #import <BaiduMobAdSDK/BaiduMobAdActButton.h>
 #import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
-#import <BaiduMobAdSDK/BaiduMobAdCPURequestParameters.h>
 #import <BaiduMobAdSDK/BaiduMobAdExpressFullScreenVideo.h>
 #import <BaiduMobAdSDK/BaiduMobAdExpressFullScreenVideoDelegate.h>
 #import <BaiduMobAdSDK/BaiduMobAdExpressIntDelegate.h>
@@ -26,6 +25,7 @@ FOUNDATION_EXPORT const unsigned char BaiduMobAdSDKVersionString[];
 #import <BaiduMobAdSDK/BaiduMobAdExpressNativeData.h>
 #import <BaiduMobAdSDK/BaiduMobAdExpressNativeView.h>
 #import <BaiduMobAdSDK/BaiduMobAdFeedRequestParameters.h>
+#import <BaiduMobAdSDK/BaiduMobAdFeedBrowseComponent.h>
 #import <BaiduMobAdSDK/BaiduMobAdHybridAdManager.h>
 #import <BaiduMobAdSDK/BaiduMobAdNative.h>
 #import <BaiduMobAdSDK/BaiduMobAdNativeAdDelegate.h>
@@ -34,10 +34,9 @@ FOUNDATION_EXPORT const unsigned char BaiduMobAdSDKVersionString[];
 #import <BaiduMobAdSDK/BaiduMobAdNativeAdView.h>
 #import <BaiduMobAdSDK/BaiduMobAdNativeCouponFlipPageView.h>
 #import <BaiduMobAdSDK/BaiduMobAdNativeCouponSuspensionView.h>
-#import <BaiduMobAdSDK/BaiduMobAdNativeCPU.h>
-#import <BaiduMobAdSDK/BaiduMobAdNativeCPUDelegate.h>
-#import <BaiduMobAdSDK/BaiduMobAdNativeCPUObject.h>
-#import <BaiduMobAdSDK/BaiduMobAdNativeCPUVideoView.h>
+#import <BaiduMobAdSDK/BaiduMobAdNativePopupFloatView.h>
+#import <BaiduMobAdSDK/BaiduMobAdNativePopupGiftView.h>
+#import <BaiduMobAdSDK/BaiduMobAdNativeWelfareCard.h>
 #import <BaiduMobAdSDK/BaiduMobAdNativeInterationDelegate.h>
 #import <BaiduMobAdSDK/BaiduMobAdNativeReporter.h>
 #import <BaiduMobAdSDK/BaiduMobAdNativeShakeView.h>
@@ -52,7 +51,6 @@ FOUNDATION_EXPORT const unsigned char BaiduMobAdSDKVersionString[];
 #import <BaiduMobAdSDK/BaiduMobAdSplash.h>
 #import <BaiduMobAdSDK/BaiduMobAdSplashDelegate.h>
 #import <BaiduMobAdSDK/BaiduMobAdVideoView.h>
-#import <BaiduMobAdSDK/BaiduMobCpuInfoManager.h>
 #import <BaiduMobAdSDK/BaiduMobAdNativeWebView.h>
 #import <BaiduMobAdSDK/BaiduMobAdManager.h>
 #import <BaiduMobAdSDK/BaiduMobAdDynamicBarrageManager.h>
@@ -61,3 +59,4 @@ FOUNDATION_EXPORT const unsigned char BaiduMobAdSDKVersionString[];
 #import <BaiduMobAdSDK/BaiduMobAdNativeECommerceView.h>
 #import <BaiduMobAdSDK/BaiduMobAdDiscountMagneticView.h>
 #import <BaiduMobAdSDK/BaiduMobAdRewardRequestParamters.h>
+#import <BaiduMobAdSDK/BaiduMobAdRewardVideoModel.h>

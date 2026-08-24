@@ -67,13 +67,6 @@
  */
 - (NSString *)apId BaiduMobAdDEPRECATED_MSG("已废弃，请使用BaiduMobAdNative.adUnitTag传入");
 
-/**
- *  广告请求失败
- */
-- (void)nativeAdsFailLoadCode:(NSString *)errCode
-                      message:(NSString *)message
-                     nativeAd:(BaiduMobAdNative *)nativeAd
-                    BaiduMobAdDEPRECATED_MSG("已废弃，请使用nativeAdsFailLoadCode:message:nativeAd:adObject:");
 @end
 
 #pragma mark - 视频缓存delegate

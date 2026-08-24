@@ -112,6 +112,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) NSString *actTime;
 
+/**
+ 行为激励类型
+ 0-关闭；1-曝光（浏览时长）；3-二跳点击
+ */
+@property (nonatomic, assign) int rewardType;
+
 // 发送视频广告相关日志
 @property (nonatomic, strong, readonly) BaiduMobAdNativeReporter *videoReport;
 

@@ -9,6 +9,7 @@
 #ifndef BaiduMobAdNativeInterationDelegate_h
 #define BaiduMobAdNativeInterationDelegate_h
 
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 
 #endif /* BaiduMobAdNativeInterationDelegate_h */
 
@@ -45,10 +46,21 @@
 /**
  * 行为激励奖励完成回调
  * 当用户完成行为激励条件（如浏览落地页达到指定时长）时触发
+ */
+#pragma mark - DEPRECATED_ATTRIBUTE
+- (void)nativeAdBehaviorIncentiveRewardDidComplete:(UIView *)nativeAdView nativeAdObject:(BaiduMobAdNativeAdObject *)object BaiduMobAdDEPRECATED_MSG("已废弃，请改用 nativeAdBehaviorIncentiveRewardVerify:nativeAdView:nativeAdObject:rewardInfo: 回调");
+
+/**
+ * 行为激励校验回调
+ * @param rewardVerify 是否发放奖励，YES 为成功
  * @param nativeAdView 当前的广告视图
  * @param object 广告数据对象
+ * @param rewardInfo 奖励扩展信息
  */
-- (void)nativeAdBehaviorIncentiveRewardDidComplete:(UIView *)nativeAdView nativeAdObject:(BaiduMobAdNativeAdObject *)object;
+- (void)nativeAdBehaviorIncentiveRewardVerify:(BOOL)rewardVerify
+                                 nativeAdView:(UIView *)nativeAdView
+                               nativeAdObject:(BaiduMobAdNativeAdObject *)object
+                                   rewardInfo:(NSDictionary *)rewardInfo;
 
 /**
  * 行为激励计时更新回调
