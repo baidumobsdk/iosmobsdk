@@ -15,7 +15,6 @@ FOUNDATION_EXPORT const unsigned char BaiduMobAdSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <BaiduMobAdSDK/PublicHeader.h>
 
-#import <BaiduMobAdSDK/IBaiduMobAdRenderEventDelegate.h>
 #import <BaiduMobAdSDK/BaiduMobAdActButton.h>
 #import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 #import <BaiduMobAdSDK/BaiduMobAdExpressFullScreenVideo.h>
