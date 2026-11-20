@@ -5,6 +5,7 @@
 注意：
 SDK从4.75版本开始支持pod集成
 SDK从4.84版本开始不再支持armv7s，i386架构
+SDK从10.08版本开始改为XCFramework
 
 # 版本更新说明
 
@@ -30,28 +31,14 @@ SDK从4.84版本开始不再支持armv7s，i386架构
 
 - 如有其他问题可以参考官网的[FAQ](https://union.baidu.com/bqt/#/help)，或者及时与我们联系。
 
-# 使用CocoaPods
+# CocoaPods
 
-CocoaPods是专门为iOS工程提供第三方依赖库的管理工具，它自动化并简化了在项目中使用第三方库（如BaiduMobAdSDK）的过程，通过CocoaPods，您可以更快速便捷的获取最新版本的SDK。
+因官方后续只支持仅读，SDK更新采用SPM
 
-您可以通过以下命令进行CocoaPods的安装：
+# SPM
 
-```shell
-gem install cocoapods
+地址：
+
 ```
-
-## Podfile
-
-为了您能集成BaiduMobAdSDK到Xcode工程中，请在Podfile文件中指定它
-
-```ruby
-target 'Your APP Xcode Project' do
-  pod 'BaiduMobAdSDK'
-end
-```
-
-然后执行
-
-```shell
-pod install
+https://github.com/baidumobsdk/iosmobsdk.git
 ```
